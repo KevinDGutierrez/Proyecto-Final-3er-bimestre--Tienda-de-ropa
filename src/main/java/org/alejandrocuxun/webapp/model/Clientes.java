@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
  *
  * @author aleja
  */
-@Table(name = "Productos")
+@Table(name = "Clientes")
 @Entity
 public class Clientes {
     

@@ -15,7 +15,7 @@ import java.sql.Blob;
  *
  * @author aleja
  */
-@Table(name = "Productos")
+@Table(name = "ProductosFemeninos")
 @Entity
 public class ProductoFemenino {
     
