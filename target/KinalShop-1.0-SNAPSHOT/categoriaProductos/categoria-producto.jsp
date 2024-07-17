@@ -1,6 +1,6 @@
 <%-- 
     Document   : categoria-producto
-    Created on : 16/07/2024, 01:38:33 PM
+    Created on : 16/07/2024, 06:03:14 PM
     Author     : aleja
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>CategoriaProducto</title>
     </head>
     <body>
         <nav class="navbar bg-body-tertiary fixed-top">

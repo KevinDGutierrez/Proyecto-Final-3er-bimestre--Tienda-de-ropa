@@ -1,6 +1,6 @@
 <%-- 
     Document   : producto-masculino
-    Created on : 16/07/2024, 01:32:06 PM
+    Created on : 16/07/2024, 06:04:58 PM
     Author     : aleja
 --%>
 
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>ProductoMasculino</title>
     </head>
     <body>
         <nav class="navbar bg-body-tertiary fixed-top">
@@ -46,10 +46,6 @@
                   <a class="nav-link active" aria-current="page" href="/src/direccion/direccion.jsp">Direccion</a>
                 </li>
               </ul>
-              <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
             </div>
           </div>
         </div>
