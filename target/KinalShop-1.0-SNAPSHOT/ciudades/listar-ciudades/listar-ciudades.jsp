@@ -1,0 +1,90 @@
+<%@page import="java.util.List"%>
+<%@page import="org.kevingutierrez.webapp.model.Ciudad"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="es">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lista Ciudad</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-info fixed-top position-relative">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.jsp">
+                <img src="assets/image/KinalShopLogo.png" alt="KinalShop Logo" class="img-fluid" style="height: 60px;">
+                KinalShop
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-info" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <p class="nav-link active" aria-current="page">Elija una opción</p>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.jsp">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ciudades/inicio-ciudades/inicio-ciudades.jsp">Ciudades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ciudades/formulario-ciudades/formulario-ciudades.jsp">Formulario Ciudades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./ciudad-servlet">Lista Ciudades</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="direccion/direccion.jsp">Direcciones</a></li>
+                        <li><a class="dropdown-item" href="categoria-productos/categoria-producto.jsp">Categorias Productos</a></li>
+                        <li><a class="dropdown-item" href="distribuidor/distribuidor.jsp">Distribuidores</a></li>
+                        <li><a class="dropdown-item" href="facturas/inicio-factura/inicio-factura.jsp">Facturas</a></li>
+                        <li><a class="dropdown-item" href="pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
+                        <li><a class="dropdown-item" href="clientes/cliente.jsp">Clientes</a></li>
+                        <li><a class="dropdown-item" href="promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a></li>
+                        <li><a class="dropdown-item" href="productos-femeninos/productos-femenino.jsp">Productos Femeninos</a></li>
+                        <li><a class="dropdown-item" href="productos-masculino/producto-masculino.jsp">Productos Masculinos</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                    </ul>
+                </li>
+                </ul>
+                </div>
+              </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <table class="table" border="2px">
+                <thead>
+                    <tr>
+                        <th class="text-center text-bg-dark text-danger" scope="col">#</th>
+                        <th class="text-center text-bg-dark text-danger" scope="col">Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% List<Ciudad> ciudades = (List)request.getAttribute("ciudades"); %>
+                    <% 
+                        for(Ciudad ciudad:ciudades){ %>
+                        <tr>
+                            <th class="text-center text-bg-dark text-danger" scope="row"><%=ciudad.getCiudadId()%></th>
+                            <th class="text-center text-bg-secondary text-light" scope="row"><%=ciudad.getNombreCiudad()%></th>
+                        </tr>
+                        <% }
+                    %>
+                </tbody>
+            </table>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
