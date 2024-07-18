@@ -1,4 +1,4 @@
-drop database if exists TiendaDeRopa;
+-- DROP DATABASE IF EXISTS TiendaDeRopa;
 
 CREATE DATABASE IF NOT EXISTS TiendaDeRopa;
 USE TiendaDeRopa;
@@ -118,14 +118,16 @@ CREATE TABLE Promociones(
 
 CREATE TABLE Pedidos (
     pedidoId INT NOT NULL AUTO_INCREMENT,
-    clienteId INT,
+    clienteId INT NOT NULL,
     fecha DATE NOT NULL,
     hora TIME NOT NULL,
     total DECIMAL(10, 2),
-    direccionEntrega VARCHAR(45),
+    direccionId INT NOT NULL,
     PRIMARY KEY PK_pedidoId(pedidoId),
     CONSTRAINT FK_Pedidos_Clientes FOREIGN KEY (clienteId) 
-		REFERENCES Clientes(clienteId)
+		REFERENCES Clientes(clienteId),
+	CONSTRAINT FK_Pedidos_Direcciones FOREIGN KEY (direccionId)
+		REFERENCES Direcciones(direccionId)
 );
 
 CREATE TABLE NivelesAcceso (
@@ -144,6 +146,34 @@ CREATE TABLE Usuarios (
     CONSTRAINT FK_Usuarios_NivelesAcceso FOREIGN KEY (nivelAccesoId)
         REFERENCES NivelesAcceso(nivelAccesoId)
 );
+
+CREATE TABLE DetalleFacturas(
+	detalleFacturaId INT NOT NULL AUTO_INCREMENT,
+    facturaId INT NOT NULL,
+    productoFemeninoId INT ,
+    productoMasculinoId INT ,
+    PRIMARY KEY PK_detalleFacturaId(detalleFacturaId),
+    CONSTRAINT FK_DetalleFacturas_Facturas FOREIGN KEY DetalleFacturas(facturaId)
+		REFERENCES Facturas(facturaId),
+	CONSTRAINT FK_DetalleFacturas_ProductosFemeninos FOREIGN KEY DetalleFacturas(productoFemeninoId)
+		REFERENCES ProductosFemeninos(productoFemeninoId) 
+);
+
+CREATE TABLE DetallePedidos(
+	detallePedidoId INT NOT NULL AUTO_INCREMENT,
+    cantidadComprada INT NOT NULL,
+    productoMasculinoId INT,
+    productoFemeninoId INT ,
+    pedidoId INT ,
+    PRIMARY KEY PK_detallePedidoId(detallePedidoId),
+    CONSTRAINT FK_DetallePedidos_ProductosFemeninos FOREIGN KEY DetallePedidos(productoFemeninoId)
+		REFERENCES ProductosFemeninos(productoFemeninoId),
+	CONSTRAINT FK_DetallePedidos_ProductosMasculinos FOREIGN KEY DetallePedidos(productoMasculinoId)
+		REFERENCES ProductosMasculinos(productoMasculinoId),
+	CONSTRAINT FK_DetallePedidos_Pedidos FOREIGN KEY DetallePedidos(pedidoId)
+		REFERENCES Pedidos(pedidoId)
+);
+
 
 
 -- CIUDADES --
@@ -229,12 +259,12 @@ INSERT INTO Promociones (precioPromocion, descripcionPromocion, fechaInicio, fec
 
 -- PEDIDOS --
 
-INSERT INTO Pedidos (clienteId, fecha, hora, total, direccionEntrega) VALUES
-	(1, '2024-07-01', '10:30:00', 100.50, 'Calle 1, Ciudad de México'),
-	(2, '2024-07-02', '11:45:00', 200.75, 'Calle 2, Guadalajara'),
-	(3, '2024-07-03', '12:00:00', 150.00, 'Calle 3, Monterrey'),
-	(4, '2024-07-04', '13:15:00', 250.25, 'Calle 4, Puebla'),
-	(5, '2024-07-05', '14:30:00', 300.50, 'Calle 5, Tijuana');
+INSERT INTO Pedidos (clienteId, fecha, hora, total, direccionId) VALUES
+	(1, '2024-07-01', '10:30:00', 100.50, 1),
+	(2, '2024-07-02', '11:45:00', 200.75, 2),
+	(3, '2024-07-03', '12:00:00', 150.00, 3),
+	(4, '2024-07-04', '13:15:00', 250.25, 4),
+	(5, '2024-07-05', '14:30:00', 300.50, 5);
 
 -- NIVEL ACCESO --
 
@@ -252,7 +282,19 @@ INSERT INTO Usuarios (usuario, contrasenia, nivelAccesoId) VALUES
 	 ('Jesus Sis', 'admin5', 1),
 	 ('Jose Cortez', 'admin6', 1),
 	 ('Usuario Prueba', 'usuario1', 2);
+     
+-- DETALLE FACTURAS --
+INSERT INTO DetalleFacturas (facturaId, productoFemeninoId, productoMasculinoId) VALUES 
+	(1, 1, NULL),
+	(2, 2, NULL),
+	(3, NULL, 1),
+	(4, NULL, 2),
+	(5, 3, NULL);
 
-
-
-
+-- DETALLE PEDIDOS --
+INSERT INTO DetallePedidos (cantidadComprada, productoMasculinoId, productoFemeninoId, pedidoId) VALUES 
+(10, 1, NULL, 1),
+(20, 2, NULL, 2),
+(15, NULL, 1, 3),
+(25, NULL, 2, 4),
+(30, 3, NULL, 5);

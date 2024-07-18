@@ -11,7 +11,7 @@
     <body>
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="index.jsp">
                 <img src="assets/image/KinalShopLogoClaro.png" alt="KinalShop Logo" class="img-fluid" style="height: 60px;">
                 KinalShop
               </a>
@@ -26,25 +26,25 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Elija una opción</a>
+                      <a class="nav-link active" aria-current="page">Elija una opción</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./index.jsp">Inicio</a>
+                      <a class="nav-link active" href="./index.jsp">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./ciudades/inicio-ciudades/inicio-ciudades.jsp">Ciudades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Direcciones</a>
+                        <a class="nav-link" href="./direccion/direccion.jsp">Direcciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Clientes</a>
+                        <a class="nav-link" href="clientes/cliente.jsp">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Distribuidores</a>
+                        <a class="nav-link" href="distribuidor/distribuidor.jsp">Distribuidores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">CategoriaProductos</a>
+                        <a class="nav-link" href="categoria-productos/categoria-producto.jsp">CategoriaProductos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./facturas/inicio-factura/inicio-factura.jsp">Facturas</a>
@@ -56,7 +56,10 @@
                         <a class="nav-link" href="./pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Usuarios</a>
+                        <a class="nav-link" href="productos-femeninos/productos-femenino.jsp">Productos Femeninos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos-masculino/producto-masculino.jsp">Productos Masculinos</a>
                     </li>
                   </ul>
                 </div>
@@ -68,7 +71,7 @@
             <div class="row">
                 <div class="col-md-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="assets/image/KinalLogoInicio.png" class="card-img-top" alt="Logo Inicio">
+                        <img src="assets/image/KinalLogoInicio.jpg" class="card-img-top" alt="Logo Inicio">
                         <div class="card-body">
                             <h1 class="card-title">"Vístete con Confianza, Brilla con Estilo"</h1>
                             <h2>¿Quiénes Somos?</h2>
@@ -98,11 +101,10 @@
                         <div class="carousel-indicators">
                           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <a href="./inicio-ciudades/inicio-ciudades.jsp">
+                              <a href="productos-masculino/producto-masculino.jsp">
                                 <img src="assets/image/OufitHombreInicio.png" class="d-block w-100" alt="Hombre">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>
@@ -110,7 +112,7 @@
                             </a>
                           </div>
                           <div class="carousel-item">
-                            <a href="./inicio-mujer/inicio-mujer.jsp">
+                            <a href="productos-femeninos/productos-femenino.jsp">
                                 <img src="assets/image/OufitMujerInicio.jpg" class="d-block w-100 h-60" alt="Mujer">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>
@@ -132,11 +134,10 @@
                         <div class="carousel-indicators">
                           <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                           <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <a href="./inicio-ciudades/inicio-ciudades.jsp">
+                              <a href="promociones/inicio-promociones/inicio-promociones.jsp">
                                 <img src="assets/image/promocion1Inicio.png" class="d-block w-100" alt="Promocion1">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>
@@ -144,7 +145,7 @@
                             </a>
                           </div>
                           <div class="carousel-item">
-                            <a href="./inicio-mujer/inicio-mujer.jsp">
+                            <a href="promociones/inicio-promociones/inicio-promociones.jsp">
                                 <img src="assets/image/Promocion2Inicio.png" class="d-block w-100 h-60" alt="Promocion2">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>

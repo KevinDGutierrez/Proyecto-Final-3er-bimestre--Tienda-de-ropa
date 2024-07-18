@@ -37,32 +37,31 @@
                       <a class="nav-link" href="../../index.jsp">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./inicio-ciudades.jsp">Ciudades</a>
+                        <a class="nav-link" href="../inicio-ciudades/inicio-ciudades.jsp">Ciudades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./formulario-ciudades.jsp">formulario Ciudades</a>
+                        <a class="nav-link" href="./formulario-ciudades.jsp">Formulario Ciudades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../listar-ciudades/listar-ciudades.jsp">listar Ciudades</a>
+                        <a class="nav-link" href="../../ciudad-servlet">Lista Ciudades</a>
                     </li>
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Opciones
-                        </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="">Direcciones</a></li>
-                        <li><a class="dropdown-item" href="">Clientes</a></li>
-                        <li><a class="dropdown-item" href="">Distribuidores</a></li>
-                        <li><a class="dropdown-item" href="">Categoria Productos</a></li>
-                        <li><a class="dropdown-item" href="./facturas/inicio-factura/inicio-factura.jsp">Facturas</a></li>
-                        <li><a class="dropdown-item" href="./promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a></li>
-                        <li><a class="dropdown-item" href="./pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
-                        <li><a class="dropdown-item" href="">Usuarios</a></li>
-                          <li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="../../direccion/direccion.jsp">Direcciones</a></li>
+                        <li><a class="dropdown-item" href="../../categoria-productos/categoria-producto.jsp">Categorias Productos</a></li>
+                        <li><a class="dropdown-item" href="../../distribuidor/distribuidor.jsp">Distribuidores</a></li>
+                        <li><a class="dropdown-item" href="../../facturas/inicio-factura/inicio-factura.jsp">Facturas</a></li>
+                        <li><a class="dropdown-item" href="../../pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
+                        <li><a class="dropdown-item" href="../../clientes/cliente.jsp">Clientes</a></li>
+                        <li><a class="dropdown-item" href="../../promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a></li>
+                        <li><a class="dropdown-item" href="../../productos-femeninos/productos-femenino.jsp">Productos Femeninos</a></li>
+                        <li><a class="dropdown-item" href="../../productos-masculino/producto-masculino.jsp">Productos Masculinos</a></li>
+                        <li>
                             <hr class="dropdown-divider">
-                          </li>
+                        </li>
                     </ul>
-                  </li>
+                </li>
                 </ul>
                 </div>
               </div>

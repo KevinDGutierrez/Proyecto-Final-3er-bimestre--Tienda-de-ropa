@@ -56,7 +56,7 @@
                         <li><a class="dropdown-item" href="">Distribuidores</a></li>
                         <li><a class="dropdown-item" href="">Categoria Productos</a></li>
                         <li><a class="dropdown-item" href="../../facturas/inicio-factura/inicio-factura.jsp">Facturas</a></li>
-                        <li><a class="dropdown-item" href="./pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
+                        <li><a class="dropdown-item" href="../../pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
                         <li><a class="dropdown-item" href="../../ciudades/inicio-ciudades/inicio-ciudades.jsp">Ciudades</a></li>
                         <li><a class="dropdown-item" href="">Usuarios</a></li>
                           <li>
