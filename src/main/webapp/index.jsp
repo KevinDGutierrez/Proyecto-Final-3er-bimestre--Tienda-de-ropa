@@ -56,10 +56,10 @@
                         <a class="nav-link" href="./pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos-femeninos/productos-femenino.jsp">Productos Femeninos</a>
+                        <a class="nav-link" href="productos-femeninos/productos-femeninos.jsp">Productos Femeninos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos-masculino/producto-masculino.jsp">Productos Masculinos</a>
+                        <a class="nav-link" href="productos-masculinos/producto-masculinos.jsp">Productos Masculinos</a>
                     </li>
                   </ul>
                 </div>

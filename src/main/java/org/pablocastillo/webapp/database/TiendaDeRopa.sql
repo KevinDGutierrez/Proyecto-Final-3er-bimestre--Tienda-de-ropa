@@ -32,8 +32,8 @@ CREATE TABLE Clientes(
 
 CREATE TABLE CategoriaProductos(
     categoriaProductoId INT NOT NULL AUTO_INCREMENT,
-    nombreCategoria VARCHAR(30),
-    descripcionCategoria VARCHAR(100),
+    nombreCategoria VARCHAR(30) NOT NULL,
+    descripcionCategoria VARCHAR(100) NOT NULL,
     PRIMARY KEY PK_categoriaProductoId (categoriaProductoId)
 );
 

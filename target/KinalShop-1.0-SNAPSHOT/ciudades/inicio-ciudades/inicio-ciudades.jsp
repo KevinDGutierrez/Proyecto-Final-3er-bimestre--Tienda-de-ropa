@@ -50,8 +50,8 @@
                         <li><a class="dropdown-item" href="../../pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
                         <li><a class="dropdown-item" href="../../clientes/cliente.jsp">Clientes</a></li>
                         <li><a class="dropdown-item" href="../../promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a></li>
-                        <li><a class="dropdown-item" href="../../productos-femeninos/productos-femenino.jsp">Productos Femeninos</a></li>
-                        <li><a class="dropdown-item" href="../../productos-masculino/producto-masculino.jsp">Productos Masculinos</a></li>
+                        <li><a class="dropdown-item" href="../../productos-femeninos/productos-femeninos.jsp">Productos Femeninos</a></li>
+                        <li><a class="dropdown-item" href="../../productos-masculinos/producto-masculinos.jsp">Productos Masculinos</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
