@@ -49,7 +49,7 @@
                         <a class="nav-link active" href="producto-masculinos.jsp">Productos Maculinos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Formulario Productos Masculinos</a>
+                        <a class="nav-link" href="agregar-masculinos.jsp">Formulario Productos Masculinos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../masculino-servlet">Listar Productos Masculinos</a>

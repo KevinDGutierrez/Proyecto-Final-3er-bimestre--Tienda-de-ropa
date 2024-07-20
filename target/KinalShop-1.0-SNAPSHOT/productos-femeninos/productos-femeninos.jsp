@@ -49,7 +49,7 @@
                         <a class="nav-link active" href="productos-femeninos.jsp">Productos Femeninos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Formulario Productos Femeninos</a>
+                        <a class="nav-link" href="agregar-femeninos.jsp">Formulario Productos Femeninos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../femenino-servlet">Listar Productos Femeninos</a>
@@ -83,7 +83,7 @@
             
             <%
                 if(femenino != null) {
-                    for(String ct:categoria){%>
+                    for(String ct:femenino){%>
                     <ul class="list-group">
                         <li class="list-group-item list-group-item-primary" _msttexthash="1411449" _msthash="308"><%=ct%></li>
                     </ul>
