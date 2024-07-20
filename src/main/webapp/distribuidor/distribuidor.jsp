@@ -33,7 +33,7 @@
                         <a class="nav-link active" href="distribuidor.jsp">Distribuidores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Formulario Distribuidores</a>
+                        <a class="nav-link" href="formulario-distribuidor/formulario-distribuidor.jsp">Formulario Distribuidores</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../distribuidor-servlet">Listar Distribuidores</a>

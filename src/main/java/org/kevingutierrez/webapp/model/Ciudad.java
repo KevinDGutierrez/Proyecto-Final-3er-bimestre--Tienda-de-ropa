@@ -4,13 +4,11 @@
  */
 package org.kevingutierrez.webapp.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import java.sql.Date;
 
 @Table(name = "Ciudades")
 @Entity
@@ -34,6 +32,10 @@ public class Ciudad {
     public Ciudad(int ciudadId, String nombreCiudad) {
         this.ciudadId = ciudadId;
         this.nombreCiudad = nombreCiudad;
+    }
+
+    public Ciudad(String ciudadId, String nombreCiudad) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     public int getCiudadId() {

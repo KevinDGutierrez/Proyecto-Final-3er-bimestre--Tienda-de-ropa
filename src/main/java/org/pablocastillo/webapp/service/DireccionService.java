@@ -1,8 +1,10 @@
 package org.pablocastillo.webapp.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.alejandrocuxun.webapp.model.Direcciones;
+import org.kevingutierrez.webapp.model.Direccion;
 import org.pablocastillo.webapp.util.JpaUtil;
 
 public class DireccionService implements IDireccionService{
@@ -19,8 +21,18 @@ public class DireccionService implements IDireccionService{
     }
 
     @Override
-    public void agregarDireccion() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void agregarDireccion(Direcciones direccion) {
+        EntityTransaction transaction = em.getTransaction();
+        try {
+            transaction.begin();
+            em.persist(direccion);
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -35,6 +47,10 @@ public class DireccionService implements IDireccionService{
 
     @Override
     public void editarDireccion(Direcciones direccion) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void agregarDireccion(Direccion direccion) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     

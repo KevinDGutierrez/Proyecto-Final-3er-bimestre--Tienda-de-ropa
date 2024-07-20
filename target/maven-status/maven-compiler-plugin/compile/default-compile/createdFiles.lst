@@ -9,8 +9,6 @@ org\ianalfaro\webapp\service\PedidoService.class
 org\pablocastillo\webapp\service\DistribuidorService.class
 org\ianalfaro\webapp\servlet\PromocionServlet.class
 org\pablocastillo\webapp\servlet\ProductoMasculinoServlet.class
-org\alejandrocuxun\webapp\model\ProductoMasculino.class
-org\alejandrocuxun\webapp\model\ProductoFemenino.class
 org\alejandrocuxun\webapp\model\Direcciones.class
 org\alejandrocuxun\webapp\model\ProductoMasculinos.class
 org\pablocastillo\webapp\service\IProductoFemeninoService.class
@@ -22,6 +20,7 @@ org\ianalfaro\webapp\servlet\CiudadServlet.class
 org\pablocastillo\webapp\service\IDireccionService.class
 org\pablocastillo\webapp\service\ClienteService.class
 org\ianalfaro\webapp\service\IPedidoService.class
+org\kevingutierrez\webapp\model\Direccion.class
 org\ianalfaro\webapp\servlet\DetallePedidoServlet.class
 org\ianalfaro\webapp\model\DetallePedido.class
 org\pablocastillo\webapp\service\DireccionService.class

@@ -57,6 +57,16 @@ public class ProductoMasculinos {
         this.categoriaproductoId = categoriaproductoId;
     }
 
+    public ProductoMasculinos(String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, int distribuidorId, int categoriaproductoId) {
+        this.nombreProducto = nombreProducto;
+        this.precioCompra = precioCompra;
+        this.descripcionProducto = descripcionProducto;
+        this.cantidadStock = cantidadStock;
+        this.precioVentaUnitario = precioVentaUnitario;
+        this.distribuidorId = distribuidorId;
+        this.categoriaproductoId = categoriaproductoId;
+    }
+
     public int getProductoMasculinoId() {
         return productoMasculinoId;
     }

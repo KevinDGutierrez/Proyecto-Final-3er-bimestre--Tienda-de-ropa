@@ -1,6 +1,7 @@
 package org.pablocastillo.webapp.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.alejandrocuxun.webapp.model.Distribuidores;
 import org.pablocastillo.webapp.util.JpaUtil;
@@ -20,8 +21,19 @@ public class DistribuidorService implements IDistribuidorService{
     }
 
     @Override
-    public void agregarDistribuidor() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void agregarDistribuidor(Distribuidores distribuidores) {
+        EntityTransaction transaction = em.getTransaction();
+        
+        try{
+            transaction.begin();
+            em.persist(distribuidores);
+            transaction.commit();
+        }catch(Exception e) {
+            if(transaction.isActive()) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
     }
 
     @Override

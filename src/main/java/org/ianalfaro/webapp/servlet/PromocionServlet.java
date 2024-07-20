@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 import org.ianalfaro.webapp.service.PromocionService;
@@ -34,26 +35,34 @@ public class PromocionServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        resp.setContentType("text/html");
         
-        ArrayList<String> promocion = new ArrayList<>();
-
-        double precioPromocion = Double.parseDouble(req.getParameter("precioPromocion"));
-        String descripcionPromocion = req.getParameter("descripcionPromocion");
-        String fechaInicio = req.getParameter("fechaInicio");
-        String fechaFinalizacion = req.getParameter("fechaFinalizacion");
-        int productoFemeninoId = Integer.parseInt(req.getParameter("productoFemeninoId"));
-        int productoMasculinoId = Integer.parseInt(req.getParameter("productoMasculinoId"));
         
-        promocion.add(Double.toString(precioPromocion));
-        promocion.add(descripcionPromocion);
-        promocion.add(fechaInicio);
-        promocion.add(fechaFinalizacion);
-        promocion.add(Integer.toString(productoFemeninoId));
-        promocion.add(Integer.toString(productoMasculinoId));
+        //Aregar Kevin
+        String path = req.getPathInfo();
         
-        req.setAttribute("promocion", promocion);
-        req.setAttribute("mensaje", "¡¡Promocion agregado con exito :D!!");
-        getServletContext().getRequestDispatcher("promociones/formulario-promociones/formulario-promociones.jsp").forward(req, resp);
+        if(path == null || path.equals("/")){
+            agregarPromocion(req, resp);
+        }else{
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
+        }
+    }
+    
+    public void agregarPromocion(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        try{
+            Double precioPromocion = Double.parseDouble(req.getParameter("precioPromocion"));
+            String descripcionPromocion = req.getParameter("descripcionPromocion");
+            Date fechaInicio = Date.valueOf(req.getParameter("fechaInicio"));
+            Date fechaFinalizacion = Date.valueOf(req.getParameter("fechaFinalizacion"));
+            int productoFemeninoId = Integer.parseInt(req.getParameter("productoFemeninoId"));
+            int productoMasculinoId = Integer.parseInt(req.getParameter("productoMasculinoId"));
+            
+            ps.agregarPromocion(new Promocion(precioPromocion, descripcionPromocion, fechaInicio, fechaFinalizacion, productoFemeninoId, productoMasculinoId));
+            
+            //resp.sendRedirect("/KinalShop/index.jsp");
+            resp.sendRedirect(req.getContextPath() + "/");
+        
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }

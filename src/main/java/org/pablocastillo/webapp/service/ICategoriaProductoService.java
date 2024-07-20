@@ -6,7 +6,7 @@ import org.alejandrocuxun.webapp.model.CategoriaProductos;
 public interface ICategoriaProductoService {
     public List<CategoriaProductos> listarCategoriaProducto();
     
-    public void agregarCategoriaProducto();
+    public void agregarCategoriaProducto(CategoriaProductos categoriaProductos);
     
     public void eliminarCategoriaProducto(int categoriaProductoId);
     

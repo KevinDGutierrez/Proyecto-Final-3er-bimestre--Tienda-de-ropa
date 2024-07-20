@@ -6,7 +6,7 @@ import org.kevingutierrez.webapp.model.Promocion;
 public interface IPromocionService {
     public List<Promocion> listarPromocion();
     
-    public void agregarPromocion();
+    public void agregarPromocion(Promocion promocion);
     
     public void eliminarPromocion(int promocionId);
     

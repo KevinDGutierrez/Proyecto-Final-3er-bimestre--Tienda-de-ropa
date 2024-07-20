@@ -1,6 +1,7 @@
 package org.pablocastillo.webapp.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.alejandrocuxun.webapp.model.ProductoMasculinos;
 import org.pablocastillo.webapp.util.JpaUtil;
@@ -19,9 +20,19 @@ public class ProductoMasculinoService implements IProductoMasculinoService{
        return em.createQuery("SELECT pm FROM ProductoMasculinos pm", ProductoMasculinos.class).getResultList();
     }
 
-    @Override
-    public void agregarProductoMasculino() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void agregarProductoMasculino(ProductoMasculinos productoMasculino) {
+       EntityTransaction transaction = em.getTransaction();
+        
+        try{
+            transaction.begin();
+            em.persist(productoMasculino);
+            transaction.commit();
+        }catch(Exception e){
+            if(transaction.isActive()){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } 
     }
 
     @Override
@@ -38,6 +49,4 @@ public class ProductoMasculinoService implements IProductoMasculinoService{
     public void editarProductoMasculino(ProductoMasculinos productoMasculino) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
-    
 }

@@ -6,7 +6,8 @@ import org.kevingutierrez.webapp.model.Ciudad;
 public interface ICiudadService {
     public List<Ciudad> listarCiudad();
     
-    public void agregarCiudad();
+  
+    public void agregarCiudad(Ciudad ciudad);
     
     public void eliminarCiudad(int ciudadId);
     

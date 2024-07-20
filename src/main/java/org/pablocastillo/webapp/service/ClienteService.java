@@ -1,6 +1,7 @@
 package org.pablocastillo.webapp.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.alejandrocuxun.webapp.model.Clientes;
 import org.pablocastillo.webapp.util.JpaUtil;
@@ -19,8 +20,19 @@ public class ClienteService implements IClienteService{
     }
 
     @Override
-    public void agregarCliente() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void agregarCliente(Clientes cliente) {
+        EntityTransaction transaction = em.getTransaction();
+        
+        try{
+            transaction.begin();
+            em.persist(cliente); 
+            transaction.commit();
+        }catch(Exception e) {
+            if(transaction.isActive()) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }    
     }
 
     @Override

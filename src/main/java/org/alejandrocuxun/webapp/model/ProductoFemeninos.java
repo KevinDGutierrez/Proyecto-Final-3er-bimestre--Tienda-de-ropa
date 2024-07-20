@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package org.alejandrocuxun.webapp.model;
 
 import jakarta.persistence.Entity;
@@ -11,17 +7,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.sql.Blob;
 
-/**
- *
- * @author aleja
- */
 @Table(name = "ProductosFemeninos")
 @Entity
 public class ProductoFemeninos {
-    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-     private int productoFemeninoId;
+    private int productoFemeninoId;
     private String nombreProducto;
     private double precioCompra;
     private String descripcionProducto;
@@ -29,12 +20,23 @@ public class ProductoFemeninos {
     private double precioVentaUnitario;
     private Blob imagenProducto;
     private int distribuidorId;
-    private int categoriaproductoId;
+    private int categoriaProductoId;
 
     public ProductoFemeninos() {
     }
 
-    public ProductoFemeninos(int productoFemeninoId, String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, Blob imagenProducto, int distribuidorId, int categoriaproductoId) {
+    public ProductoFemeninos(String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, Blob imagenProducto, int distribuidorId, int categoriaProductoId) {
+        this.nombreProducto = nombreProducto;
+        this.precioCompra = precioCompra;
+        this.descripcionProducto = descripcionProducto;
+        this.cantidadStock = cantidadStock;
+        this.precioVentaUnitario = precioVentaUnitario;
+        this.imagenProducto = imagenProducto;
+        this.distribuidorId = distribuidorId;
+        this.categoriaProductoId = categoriaProductoId;
+    }
+
+    public ProductoFemeninos(int productoFemeninoId, String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, Blob imagenProducto, int distribuidorId, int categoriaProductoId) {
         this.productoFemeninoId = productoFemeninoId;
         this.nombreProducto = nombreProducto;
         this.precioCompra = precioCompra;
@@ -43,25 +45,24 @@ public class ProductoFemeninos {
         this.precioVentaUnitario = precioVentaUnitario;
         this.imagenProducto = imagenProducto;
         this.distribuidorId = distribuidorId;
-        this.categoriaproductoId = categoriaproductoId;
+        this.categoriaProductoId = categoriaProductoId;
     }
 
-    public ProductoFemeninos(String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, Blob imagenProducto, int distribuidorId, int categoriaproductoId) {
+    public ProductoFemeninos(String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, int distribuidorId, int categoriaProductoId) {
         this.nombreProducto = nombreProducto;
         this.precioCompra = precioCompra;
         this.descripcionProducto = descripcionProducto;
         this.cantidadStock = cantidadStock;
         this.precioVentaUnitario = precioVentaUnitario;
-        this.imagenProducto = imagenProducto;
         this.distribuidorId = distribuidorId;
-        this.categoriaproductoId = categoriaproductoId;
+        this.categoriaProductoId = categoriaProductoId;
     }
 
     public int getProductoFemeninoId() {
         return productoFemeninoId;
     }
 
-    public void setpProductoFemeninoId(int productoFemeninoId) {
+    public void setProductoFemeninoId(int productoFemeninoId) {
         this.productoFemeninoId = productoFemeninoId;
     }
 
@@ -121,16 +122,16 @@ public class ProductoFemeninos {
         this.distribuidorId = distribuidorId;
     }
 
-    public int getCategoriaproductoId() {
-        return categoriaproductoId;
+    public int getCategoriaProductoId() {
+        return categoriaProductoId;
     }
 
-    public void setCategoriaproductoId(int categoriaproductoId) {
-        this.categoriaproductoId = categoriaproductoId;
+    public void setCategoriaProductoId(int categoriaProductoId) {
+        this.categoriaProductoId = categoriaProductoId;
     }
 
     @Override
     public String toString() {
-        return "ProductosFemeninos{" + "productoFemeninoId=" + productoFemeninoId + ", nombreProducto=" + nombreProducto + ", precioCompra=" + precioCompra + ", descripcionProducto=" + descripcionProducto + ", cantidadStock=" + cantidadStock + ", precioVentaUnitario=" + precioVentaUnitario + ", imagenProducto=" + imagenProducto + ", distribuidorId=" + distribuidorId + ", categoriaproductoId=" + categoriaproductoId + '}';
+        return "ProductoFemeninos{" + "productoFemeninoId=" + productoFemeninoId + ", nombreProducto=" + nombreProducto + ", precioCompra=" + precioCompra + ", descripcionProducto=" + descripcionProducto + ", cantidadStock=" + cantidadStock + ", precioVentaUnitario=" + precioVentaUnitario + ", imagenProducto=" + imagenProducto + ", distribuidorId=" + distribuidorId + ", categoriaproductoId=" + categoriaProductoId + '}';
     }
 }

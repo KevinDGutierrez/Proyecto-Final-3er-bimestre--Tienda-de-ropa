@@ -36,7 +36,7 @@
                     <a class="nav-link" aria-current="page" href="productos-masculinos/producto-masculinos.jsp">Producto Masculinos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Formulario Masculinos</a>
+                    <a class="nav-link" href="productos-masculinos/formulario-masculinos/agregar-masculinos.jsp">Formulario Masculinos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="masculino-servlet">Lista Masculinos</a>

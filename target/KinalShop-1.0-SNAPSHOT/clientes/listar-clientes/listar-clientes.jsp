@@ -36,10 +36,10 @@
                     <a class="nav-link" aria-current="page" href="clientes/cliente.jsp">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Formulario Clientes</a>
+                    <a class="nav-link" href="clientes/formulario-clientes/formulario-clientes.jsp">Formulario Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="cliente-servlet">Lista Clientes</a>
+                    <a class="nav-link active" aria-current="page" href="./cliente-servlet">Lista Clientes</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>
@@ -64,31 +64,35 @@
         </div>
         </nav>
         <div class="container mt-5">
-            <table class="table" border="2px">
-                <thead>
-                    <tr>
-                        <th class="text-center text-bg-dark text-danger" scope="col">Id</th>
-                        <th class="text-center text-bg-dark text-danger" scope="col">Nombre</th>
-                        <th class="text-center text-bg-dark text-danger" scope="col">Apellido</th>
-                        <th class="text-center text-bg-dark text-danger" scope="col">Direccion Id</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% List<Clientes> clientes = (List)request.getAttribute("clientes"); %>
-                    <% 
-                        for(Clientes cliente:clientes){ %>
-                            <tr>
-                                <th class="text-center text-bg-dark text-danger" scope="row"><%=cliente.getClienteId()%></th>
-                                <td class="text-center text-bg-secondary text-light" scope="row"><%=cliente.getNombre()%></td>
-                                <td class="text-center text-bg-secondary text-light" scope="row"><%=cliente.getApellido()%></td>
-                                <td class="text-center text-bg-secondary text-light" scope="row"><%=cliente.getDireccionId()%></td>
-                            </tr>
-                        <% }
-                    %>
-                </tbody>
-                
-            </table>
-        </div>
+        <h2 class="text-center">Lista de Clientes</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Apellido</th>
+                    <th class="text-center">Dirección ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% 
+                    List<Clientes> clientes = (List<Clientes>) request.getAttribute("clientes");
+                    if (clientes != null) {
+                        for (Clientes cliente : clientes) {
+                %>
+                <tr>
+                    <th class="text-center text-bg-dark text-danger" scope="row"><%= cliente.getClienteId() %></th>
+                    <td class="text-center text-bg-secondary text-light" scope="row"><%= cliente.getNombre() %></td>
+                    <td class="text-center text-bg-secondary text-light" scope="row"><%= cliente.getApellido() %></td>
+                    <td class="text-center text-bg-secondary text-light" scope="row"><%= cliente.getDireccionId()%></td>
+                </tr>
+                <% 
+                        }
+                    }
+                %>
+            </tbody>
+        </table>
+    </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

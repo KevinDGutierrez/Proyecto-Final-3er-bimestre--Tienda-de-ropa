@@ -6,7 +6,7 @@ import org.alejandrocuxun.webapp.model.Direcciones;
 public interface IDireccionService {
     public List<Direcciones> listarDireccion();
     
-    public void agregarDireccion();
+    public void agregarDireccion(Direcciones direccion);
     
     public void eliminarDireccion(int direccionId);
     

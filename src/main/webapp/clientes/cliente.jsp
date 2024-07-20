@@ -33,7 +33,7 @@
                         <a class="nav-link active" href="cliente.jsp">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Formulario Clientes</a>
+                        <a class="nav-link" href="formulario-clientes/formulario-clientes.jsp">Formulario Clientes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="../cliente-servlet">Listar Clientes</a>
