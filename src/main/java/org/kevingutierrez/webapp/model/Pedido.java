@@ -25,24 +25,24 @@ public class Pedido {
     private int clienteId;
     private Date fecha;
     private double total;
-    private String direccionEntrega;
+    private int direccionId;
 
     public Pedido() {
     }
 
-    public Pedido(int clienteId, Date fecha, double total, String direccionEntrega) {
+    public Pedido(int clienteId, Date fecha, double total, int direccionId) {
         this.clienteId = clienteId;
         this.fecha = fecha;
         this.total = total;
-        this.direccionEntrega = direccionEntrega;
+        this.direccionId = direccionId;
     }
 
-    public Pedido(int pedidoId, int clienteId, Date fecha, double total, String direccionEntrega) {
+    public Pedido(int pedidoId, int clienteId, Date fecha, double total, int direccionId) {
         this.pedidoId = pedidoId;
         this.clienteId = clienteId;
         this.fecha = fecha;
         this.total = total;
-        this.direccionEntrega = direccionEntrega;
+        this.direccionId = direccionId;
     }
 
     public int getPedidoId() {
@@ -77,16 +77,16 @@ public class Pedido {
         this.total = total;
     }
 
-    public String getDireccionEntrega() {
-        return direccionEntrega;
+    public int getDireccionId() {
+        return direccionId;
     }
 
-    public void setDireccionEntrega(String direccionEntrega) {
-        this.direccionEntrega = direccionEntrega;
+    public void setDireccionId(int direccionId) {
+        this.direccionId = direccionId;
     }
 
     @Override
     public String toString() {
-        return "Pedido{" + "pedidoId=" + pedidoId + ", clienteId=" + clienteId + ", fecha=" + fecha + ", total=" + total + ", direccionEntrega=" + direccionEntrega + '}';
+        return "Pedido{" + "pedidoId=" + pedidoId + ", clienteId=" + clienteId + ", fecha=" + fecha + ", total=" + total + ", direccionId=" + direccionId + '}';
     }
 }

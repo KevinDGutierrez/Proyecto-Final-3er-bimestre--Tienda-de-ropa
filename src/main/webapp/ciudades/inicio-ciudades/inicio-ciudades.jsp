@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>KinalShop</title>
+        <title>Ciudad</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
     
@@ -41,8 +41,8 @@
                         <a class="nav-link" href="../../ciudad-servlet">Lista Ciudades</a>
                     </li>
                 <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
                         <li><a class="dropdown-item" href="../../direccion/direccion.jsp">Direcciones</a></li>
                         <li><a class="dropdown-item" href="../../categoria-productos/categoria-producto.jsp">Categorias Productos</a></li>
                         <li><a class="dropdown-item" href="../../distribuidor/distribuidor.jsp">Distribuidores</a></li>
@@ -50,8 +50,8 @@
                         <li><a class="dropdown-item" href="../../pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
                         <li><a class="dropdown-item" href="../../clientes/cliente.jsp">Clientes</a></li>
                         <li><a class="dropdown-item" href="../../promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a></li>
-                        <li><a class="dropdown-item" href="../../productos-femeninos/productos-femenino.jsp">Productos Femeninos</a></li>
-                        <li><a class="dropdown-item" href="../../productos-masculino/producto-masculino.jsp">Productos Masculinos</a></li>
+                        <li><a class="dropdown-item" href="../../productos-femeninos/productos-femeninos.jsp">Productos Femeninos</a></li>
+                        <li><a class="dropdown-item" href="../../productos-masculinos/producto-masculinos.jsp">Productos Masculinos</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

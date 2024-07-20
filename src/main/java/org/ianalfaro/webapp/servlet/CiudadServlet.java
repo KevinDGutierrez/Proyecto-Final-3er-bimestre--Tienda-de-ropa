@@ -44,6 +44,6 @@ public class CiudadServlet extends HttpServlet{
         
         req.setAttribute("ciudad", ciudad);
         req.setAttribute("mensaje", "¡¡Ciudad agregado con exito :D!!");
-        getServletContext().getRequestDispatcher("/formulario-ciudades/formulario-ciudades.jsp").forward(req, resp);
+        getServletContext().getRequestDispatcher("ciudades/formulario-ciudades/formulario-ciudades.jsp").forward(req, resp);
     }
 }

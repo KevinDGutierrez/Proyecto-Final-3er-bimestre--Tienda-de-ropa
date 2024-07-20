@@ -3,7 +3,8 @@
     Created on : 16/07/2024, 18:01:26
     Author     : kevin
 --%>
-
+<%@page import="java.util.List"%>
+<%@page import="org.kevingutierrez.webapp.model.Promocion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,10 +16,10 @@
     </head>
     
     <body>
-        <nav class="navbar navbar-dark bg-warning fixed-top">
+        <nav class="navbar navbar-dark bg-warning fixed-top position-relative">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="../../assets/image/KinalShopLogo.png" alt="KinalShop Logo" class="img-fluid" style="height: 60px;">
+              <a class="navbar-brand" href="index.jsp">
+                <img src="assets/image/KinalShopLogo.png" alt="KinalShop Logo" class="img-fluid" style="height: 60px;">
                 KinalShop
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
@@ -32,36 +33,37 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Elija una opción</a>
+                      <p class="nav-link active" aria-current="page">Elija una opción</p>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="../../index.jsp">Inicio</a>
+                      <a class="nav-link" href="index.jsp">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../inicio-promociones/inicio-promociones.jsp">Promociones</a>
+                        <a class="nav-link" href="promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../formulario-promociones/formulario-promociones.jsp">formulario Promociones</a>
+                        <a class="nav-link" href="promociones/formulario-promociones/formulario-promociones.jsp">Formulario Promociones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./listar-promociones.jsp">listar Promociones</a>
+                        <a class="nav-link active" href="./promocion-servlet">Lista Promociones</a>
                     </li>
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Opciones
                         </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="">Direcciones</a></li>
-                        <li><a class="dropdown-item" href="">Clientes</a></li>
-                        <li><a class="dropdown-item" href="">Distribuidores</a></li>
-                        <li><a class="dropdown-item" href="">Categoria Productos</a></li>
-                        <li><a class="dropdown-item" href="../../facturas/inicio-factura/inicio-factura.jsp">Facturas</a></li>
-                        <li><a class="dropdown-item" href="../../pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
-                        <li><a class="dropdown-item" href="../../ciudades/inicio-ciudades/inicio-ciudades.jsp">Ciudades</a></li>
-                        <li><a class="dropdown-item" href="">Usuarios</a></li>
-                          <li>
+                        <li><a class="dropdown-item" href="direccion/direccion.jsp">Direcciones</a></li>
+                        <li><a class="dropdown-item" href="categoria-productos/categoria-producto.jsp">Categorias Productos</a></li>
+                        <li><a class="dropdown-item" href="distribuidor/distribuidor.jsp">Distribuidores</a></li>
+                        <li><a class="dropdown-item" href="facturas/inicio-factura/inicio-factura.jsp">Facturas</a></li>
+                        <li><a class="dropdown-item" href="ciudades/inicio-ciudades/inicio-ciudades.jsp">Ciudades</a></li>
+                        <li><a class="dropdown-item" href="clientes/cliente.jsp">Clientes</a></li>
+                        <li><a class="dropdown-item" href="pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
+                        <li><a class="dropdown-item" href="productos-femeninos/productos-femenino.jsp">Productos Femeninos</a></li>
+                        <li><a class="dropdown-item" href="productos-masculino/producto-masculino.jsp">Productos Masculinos</a></li>
+                        <li>
                             <hr class="dropdown-divider">
-                          </li>
+                        </li>
                     </ul>
                   </li>
                 </ul>
@@ -69,6 +71,37 @@
               </div>
             </div>
         </nav>
+        <div class="container mt-5">
+            <table class="table" border="2px">
+                <thead>
+                    <tr>
+                        <th class="text-center text-bg-dark text-danger" scope="col">#</th>
+                        <th class="text-center text-bg-dark text-danger" scope="col">Precio Promocion</th>
+                        <th class="text-center text-bg-dark text-danger" scope="col">Descripcion Promocion</th>
+                        <th class="text-center text-bg-dark text-danger" scope="col">Fecha Inicio</th>
+                        <th class="text-center text-bg-dark text-danger" scope="col">Fecha Final</th>
+                        <th class="text-center text-bg-dark text-danger" scope="col">Producto Femenino</th>
+                        <th class="text-center text-bg-dark text-danger" scope="col">Producto Masculino</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% List<Promocion> promociones = (List)request.getAttribute("promociones"); %>
+                    <% 
+                        for(Promocion promocion:promociones){ %>
+                        <tr>
+                            <th class="text-center text-bg-dark text-danger" scope="row"><%=promocion.getPromocionId()%></th>
+                            <th class="text-center text-bg-secondary text-light" scope="row"><%=promocion.getPrecioPromocion()%></th>
+                            <th class="text-center text-bg-secondary text-light" scope="row"><%=promocion.getDescripcionPromocion()%></th>
+                            <th class="text-center text-bg-secondary text-light" scope="row"><%=promocion.getFechaInicio()%></th>
+                            <th class="text-center text-bg-secondary text-light" scope="row"><%=promocion.getFechaFinalizacion()%></th>
+                            <th class="text-center text-bg-secondary text-light" scope="row"><%=promocion.getProductoFemeninoId()%></th>
+                            <th class="text-center text-bg-secondary text-light" scope="row"><%=promocion.getProductoMasculinoId()%></th>
+                        </tr>
+                        <% }
+                    %>
+                </tbody>
+            </table>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

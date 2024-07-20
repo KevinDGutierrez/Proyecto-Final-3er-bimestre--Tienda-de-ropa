@@ -1,9 +1,3 @@
-<%-- 
-    Document   : cliente
-    Created on : 16/07/2024, 06:03:37 PM
-    Author     : aleja
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,8 +9,9 @@
     <body>
         <nav class="navbar bg-body-tertiary fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="../index.jsp">
             <img src="../assets/image/Logo.png" alt="Kinal-Shop Logo" style="height: 40px; margin-right: 25px;">
+            KinalShop
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,7 +24,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Elija una opción</a>
+                      <p class="nav-link active" aria-current="page">Elija una opción</p>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="../index.jsp">Inicio</a>
@@ -38,10 +33,10 @@
                         <a class="nav-link active" href="cliente.jsp">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="formulario-clientes/formulario-clientes.jsp">Formulario Clientes</a>
+                        <a class="nav-link" href="#">Formulario Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="listar-clientes/listar-clientes.jsp">Listar Clientes</a>
+                        <a class="nav-link" aria-current="page" href="../cliente-servlet">Listar Clientes</a>
                     </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>
@@ -53,8 +48,8 @@
                         <li><a class="dropdown-item" href="../pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
                         <li><a class="dropdown-item" href="../ciudades/inicio-ciudades/inicio-ciudades.jsp">Ciudades</a></li>
                         <li><a class="dropdown-item" href="../promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a></li>
-                        <li><a class="dropdown-item" href="../productos-femeninos/productos-femenino.jsp">Productos Femeninos</a></li>
-                        <li><a class="dropdown-item" href="../productos-masculino/producto-masculino.jsp">Productos Masculinos</a></li>
+                        <li><a class="dropdown-item" href="../productos-femeninos/productos-femeninos.jsp">Productos Femeninos</a></li>
+                        <li><a class="dropdown-item" href="../productos-masculinos/producto-masculinos.jsp">Productos Masculinos</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

@@ -56,10 +56,10 @@
                         <a class="nav-link" href="./pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos-femeninos/productos-femenino.jsp">Productos Femeninos</a>
+                        <a class="nav-link" href="productos-femeninos/productos-femeninos.jsp">Productos Femeninos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos-masculino/producto-masculino.jsp">Productos Masculinos</a>
+                        <a class="nav-link" href="productos-masculinos/producto-masculinos.jsp">Productos Masculinos</a>
                     </li>
                   </ul>
                 </div>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                              <a href="productos-masculino/producto-masculino.jsp">
+                              <a href="productos-masculinos/producto-masculinos.jsp">
                                 <img src="assets/image/OufitHombreInicio.png" class="d-block w-100" alt="Hombre">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>
@@ -112,7 +112,7 @@
                             </a>
                           </div>
                           <div class="carousel-item">
-                            <a href="productos-femeninos/productos-femenino.jsp">
+                            <a href="productos-femeninos/productos-femeninos.jsp">
                                 <img src="assets/image/OufitMujerInicio.jpg" class="d-block w-100 h-60" alt="Mujer">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                              <a href="promociones/inicio-promociones/inicio-promociones.jsp">
+                              <a href="./promociones/inicio-promociones/inicio-promociones.jsp">
                                 <img src="assets/image/promocion1Inicio.png" class="d-block w-100" alt="Promocion1">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>
@@ -145,7 +145,7 @@
                             </a>
                           </div>
                           <div class="carousel-item">
-                            <a href="promociones/inicio-promociones/inicio-promociones.jsp">
+                            <a href="./promociones/inicio-promociones/inicio-promociones.jsp">
                                 <img src="assets/image/Promocion2Inicio.png" class="d-block w-100 h-60" alt="Promocion2">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>

@@ -7,13 +7,13 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>KinalShop</title>
+        <title>Lista Ciudad</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
     <body>
         <nav class="navbar navbar-dark bg-info fixed-top position-relative">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="index.jsp">
                 <img src="assets/image/KinalShopLogo.png" alt="KinalShop Logo" class="img-fluid" style="height: 60px;">
                 KinalShop
               </a>
@@ -28,7 +28,7 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Elija una opción</a>
+                      <p class="nav-link active" aria-current="page">Elija una opción</p>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="index.jsp">Inicio</a>
@@ -40,7 +40,7 @@
                         <a class="nav-link" href="ciudades/formulario-ciudades/formulario-ciudades.jsp">Formulario Ciudades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./ciudad-servlet">Lista Ciudades</a>
+                        <a class="nav-link active" href="./ciudad-servlet">Lista Ciudades</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>
@@ -52,8 +52,8 @@
                         <li><a class="dropdown-item" href="pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
                         <li><a class="dropdown-item" href="clientes/cliente.jsp">Clientes</a></li>
                         <li><a class="dropdown-item" href="promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a></li>
-                        <li><a class="dropdown-item" href="productos-femeninos/productos-femenino.jsp">Productos Femeninos</a></li>
-                        <li><a class="dropdown-item" href="productos-masculino/producto-masculino.jsp">Productos Masculinos</a></li>
+                        <li><a class="dropdown-item" href="productos-femeninos/productos-femeninos.jsp">Productos Femeninos</a></li>
+                        <li><a class="dropdown-item" href="productos-masculinos/producto-masculinos.jsp">Productos Masculinos</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

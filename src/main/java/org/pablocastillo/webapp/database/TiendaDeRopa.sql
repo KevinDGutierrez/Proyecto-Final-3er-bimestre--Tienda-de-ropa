@@ -32,8 +32,8 @@ CREATE TABLE Clientes(
 
 CREATE TABLE CategoriaProductos(
     categoriaProductoId INT NOT NULL AUTO_INCREMENT,
-    nombreCategoria VARCHAR(30),
-    descripcionCategoria VARCHAR(100),
+    nombreCategoria VARCHAR(30) NOT NULL,
+    descripcionCategoria VARCHAR(100) NOT NULL,
     PRIMARY KEY PK_categoriaProductoId (categoriaProductoId)
 );
 
@@ -90,8 +90,8 @@ CREATE TABLE Facturas(
     hora TIME NOT NULL,
     clienteId INT NOT NULL,
     total DECIMAL(10,2),
-    productoFemeninoId INT,
-    productoMasculinoId INT,
+    productoFemeninoId INT NOT NULL,
+    productoMasculinoId INT NOT NULL,
     PRIMARY KEY (facturaId),
     CONSTRAINT FK_Facturas_Clientes FOREIGN KEY (clienteId)
         REFERENCES Clientes(clienteId),
@@ -150,8 +150,8 @@ CREATE TABLE Usuarios (
 CREATE TABLE DetalleFacturas(
 	detalleFacturaId INT NOT NULL AUTO_INCREMENT,
     facturaId INT NOT NULL,
-    productoFemeninoId INT ,
-    productoMasculinoId INT ,
+    productoFemeninoId INT NOT NULL,
+    productoMasculinoId INT NOT NULL,
     PRIMARY KEY PK_detalleFacturaId(detalleFacturaId),
     CONSTRAINT FK_DetalleFacturas_Facturas FOREIGN KEY DetalleFacturas(facturaId)
 		REFERENCES Facturas(facturaId),
@@ -162,9 +162,9 @@ CREATE TABLE DetalleFacturas(
 CREATE TABLE DetallePedidos(
 	detallePedidoId INT NOT NULL AUTO_INCREMENT,
     cantidadComprada INT NOT NULL,
-    productoMasculinoId INT,
-    productoFemeninoId INT ,
-    pedidoId INT ,
+    productoMasculinoId INT NOT NULL,
+    productoFemeninoId INT NOT NULL,
+    pedidoId INT NOT NULL,
     PRIMARY KEY PK_detallePedidoId(detallePedidoId),
     CONSTRAINT FK_DetallePedidos_ProductosFemeninos FOREIGN KEY DetallePedidos(productoFemeninoId)
 		REFERENCES ProductosFemeninos(productoFemeninoId),
@@ -223,30 +223,30 @@ INSERT INTO Distribuidores (nombreDistribuidor, direccionDistribuidor, nitDistri
 
 -- PRODUCTOS MASCULINOS --
 
-INSERT INTO ProductosMasculinos (nombreProducto, precioCompra, descripcionProducto, cantidadStock, precioVentaUnitario, imagenProducto, distribuidorId, categoriaproductoId) VALUES
-	('Camisa Casual', 15.50, 'Camisa de algodón para uso diario', 50, 25.00, NULL, 1, 1),
-	('Pantalón de Vestir', 20.00, 'Pantalón de vestir elegante', 30, 40.00, NULL, 2, 2),
-	('Chaqueta de Cuero', 50.00, 'Chaqueta de cuero genuino', 10, 100.00, NULL, 3, 4),
-	('Jeans', 25.00, 'Jeans de mezclilla de alta calidad', 40, 50.00, NULL, 4, 2),
-	('Cinturón de Cuero', 5.00, 'Cinturón de cuero marrón', 100, 15.00, NULL, 5, 5);
+INSERT INTO ProductosMasculinos (nombreProducto, precioCompra, descripcionProducto, cantidadStock, precioVentaUnitario, distribuidorId, categoriaproductoId) VALUES
+	('Camisa Casual', 15.50, 'Camisa de algodón para uso diario', 50, 25.00, 1, 1),
+	('Pantalón de Vestir', 20.00, 'Pantalón de vestir elegante', 30, 40.00, 2, 2),
+	('Chaqueta de Cuero', 50.00, 'Chaqueta de cuero genuino', 10, 100.00, 3, 4),
+	('Jeans', 25.00, 'Jeans de mezclilla de alta calidad', 40, 50.00, 4, 2),
+	('Cinturón de Cuero', 5.00, 'Cinturón de cuero marrón', 100, 15.00, 5, 5);
 
 -- PRODUCTOS FEMENINOS --
 
-INSERT INTO ProductosFemeninos (nombreProducto, precioCompra, descripcionProducto, cantidadStock, precioVentaUnitario, imagenProducto, distribuidorId, categoriaproductoId) VALUES
-	('Blusa Elegante', 12.00, 'Blusa de seda con encaje', 50, 25.00, NULL, 1, 1),
-	('Falda Casual', 8.00, 'Falda de mezclilla para uso diario', 60, 20.00, NULL, 2, 2),
-	('Vestido de Fiesta', 30.00, 'Vestido largo de gala', 20, 60.00, NULL, 3, 3),
-	('Chaqueta de Moda', 18.00, 'Chaqueta de cuero sintético', 40, 35.00, NULL, 4, 4),
-	('Sombrero Elegante', 5.00, 'Sombrero de ala ancha', 100, 15.00, NULL, 5, 5);
+INSERT INTO ProductosFemeninos (nombreProducto, precioCompra, descripcionProducto, cantidadStock, precioVentaUnitario, distribuidorId, categoriaproductoId) VALUES
+	('Blusa Elegante', 12.00, 'Blusa de seda con encaje', 50, 25.00, 1, 1),
+	('Falda Casual', 8.00, 'Falda de mezclilla para uso diario', 60, 20.00, 2, 2),
+	('Vestido de Fiesta', 30.00, 'Vestido largo de gala', 20, 60.00, 3, 3),
+	('Chaqueta de Moda', 18.00, 'Chaqueta de cuero sintético', 40, 35.00, 4, 4),
+	('Sombrero Elegante', 5.00, 'Sombrero de ala ancha', 100, 15.00, 5, 5);
 
 -- FACTURAS -- 
 
 INSERT INTO Facturas (fecha, hora, clienteId, total, productoFemeninoId, productoMasculinoId) VALUES
-    ('2024-07-01', '10:30:00', 1, 100.50, NULL, NULL),
-    ('2024-07-02', '11:45:00', 2, 200.75, NULL, NULL),
-    ('2024-07-03', '12:00:00', 3, 150.00, NULL, NULL),
-    ('2024-07-04', '13:15:00', 4, 250.25, NULL, NULL),
-    ('2024-07-05', '14:30:00', 5, 300.50, NULL, NULL);
+    ('2024-07-01', '10:30:00', 1, 100.50, 2, 5),
+    ('2024-07-02', '11:45:00', 2, 200.75, 1, 4),
+    ('2024-07-03', '12:00:00', 3, 150.00, 3, 3),
+    ('2024-07-04', '13:15:00', 4, 250.25, 4, 2),
+    ('2024-07-05', '14:30:00', 5, 300.50, 5, 1);
 
 
 -- PROMOCIONES --
@@ -285,16 +285,16 @@ INSERT INTO Usuarios (usuario, contrasenia, nivelAccesoId) VALUES
      
 -- DETALLE FACTURAS --
 INSERT INTO DetalleFacturas (facturaId, productoFemeninoId, productoMasculinoId) VALUES 
-	(1, 1, NULL),
-	(2, 2, NULL),
-	(3, NULL, 1),
-	(4, NULL, 2),
-	(5, 3, NULL);
+	(1, 1, 1),
+	(2, 2, 2),
+	(3, 3, 3),
+	(4, 4, 2),
+	(5, 3, 5);
 
 -- DETALLE PEDIDOS --
 INSERT INTO DetallePedidos (cantidadComprada, productoMasculinoId, productoFemeninoId, pedidoId) VALUES 
-(10, 1, NULL, 1),
-(20, 2, NULL, 2),
-(15, NULL, 1, 3),
-(25, NULL, 2, 4),
-(30, 3, NULL, 5);
+	(10, 1, 2, 1),
+	(20, 2, 1, 2),
+	(15, 3, 3, 3),
+	(25, 4, 4, 4),
+	(30, 3, 5, 5);
