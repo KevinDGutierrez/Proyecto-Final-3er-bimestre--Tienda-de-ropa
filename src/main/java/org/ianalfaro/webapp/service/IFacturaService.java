@@ -6,7 +6,7 @@ import org.kevingutierrez.webapp.model.Factura;
 public interface IFacturaService {
     public List<Factura> listarFactura();
     
-    public void agregarFactura();
+    public void agregarFactura(Factura factura);
     
     public void eliminarFactura(int facturaId);
     

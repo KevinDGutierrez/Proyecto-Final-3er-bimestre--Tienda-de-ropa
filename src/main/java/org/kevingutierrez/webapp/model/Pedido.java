@@ -11,6 +11,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.sql.Date;
+import java.sql.Time;
 
 @Table(name = "Pedidos")
 @Entity
@@ -24,23 +25,26 @@ public class Pedido {
     private int pedidoId;
     private int clienteId;
     private Date fecha;
+    private Time hora;
     private double total;
     private int direccionId;
 
     public Pedido() {
     }
 
-    public Pedido(int clienteId, Date fecha, double total, int direccionId) {
+    public Pedido(int clienteId, Date fecha, Time hora, double total, int direccionId) {
         this.clienteId = clienteId;
         this.fecha = fecha;
+        this.hora = hora;
         this.total = total;
         this.direccionId = direccionId;
     }
 
-    public Pedido(int pedidoId, int clienteId, Date fecha, double total, int direccionId) {
+    public Pedido(int pedidoId, int clienteId, Date fecha, Time hora, double total, int direccionId) {
         this.pedidoId = pedidoId;
         this.clienteId = clienteId;
         this.fecha = fecha;
+        this.hora = hora;
         this.total = total;
         this.direccionId = direccionId;
     }
@@ -69,6 +73,14 @@ public class Pedido {
         this.fecha = fecha;
     }
 
+    public Time getHora() {
+        return hora;
+    }
+
+    public void setHora(Time hora) {
+        this.hora = hora;
+    }
+    
     public double getTotal() {
         return total;
     }
@@ -87,6 +99,6 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido{" + "pedidoId=" + pedidoId + ", clienteId=" + clienteId + ", fecha=" + fecha + ", total=" + total + ", direccionId=" + direccionId + '}';
+        return "Pedido{" + "pedidoId=" + pedidoId + ", clienteId=" + clienteId + ", fecha=" + fecha + ", hora=" + hora + ", total=" + total + ", direccionId=" + direccionId + '}';
     }
 }

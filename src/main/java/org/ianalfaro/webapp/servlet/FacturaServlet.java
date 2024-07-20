@@ -7,6 +7,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.Date;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 import org.ianalfaro.webapp.service.FacturaService;
@@ -34,26 +36,24 @@ public class FacturaServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        resp.setContentType("text/html");
+        String path = req.getPathInfo();
         
-        ArrayList<String> factura = new ArrayList<>();
-
-        String fecha = req.getParameter("fecha");
-        String hora = req.getParameter("hora");
+        if(path == null || path.equals("/")){
+            agregarFactura(req, resp);
+        }
+    }
+    
+    public void agregarFactura(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+        Date fecha = Date.valueOf(req.getParameter("fecha"));
+        Time hora = Time.valueOf(req.getParameter("hora") + ":00");
         int clienteId = Integer.parseInt(req.getParameter("clienteId"));
-        double total = Double.parseDouble(req.getParameter("total"));
         int productoFemeninoId = Integer.parseInt(req.getParameter("productoFemeninoId"));
         int productoMasculinoId = Integer.parseInt(req.getParameter("productoMasculinoId"));
+        double total = Double.parseDouble(req.getParameter("total"));
         
-        factura.add(fecha);
-        factura.add(hora);
-        factura.add(Integer.toString(clienteId));
-        factura.add(Double.toString(total));
-        factura.add(Integer.toString(productoFemeninoId));
-        factura.add(Integer.toString(productoMasculinoId));
+        ps.agregarFactura(new Factura(fecha, hora, clienteId, total, productoFemeninoId, productoMasculinoId));
         
-        req.setAttribute("factura", factura);
-        req.setAttribute("mensaje", "¡¡Factura agregada con exito :D!!");
-        getServletContext().getRequestDispatcher("facturas/formulario-facturas/formulario-facturas.jsp").forward(req, resp);
+        resp.sendRedirect(req.getContextPath() + "/index.jsp");
     }
 }

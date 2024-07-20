@@ -9,6 +9,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Date;
+import java.sql.Time;
 import org.ianalfaro.webapp.service.PedidoService;
 import org.kevingutierrez.webapp.model.Pedido;
 
@@ -34,22 +36,23 @@ public class PedidoServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        resp.setContentType("text/html");
+        String path = req.getPathInfo();
         
-        ArrayList<String> pedido = new ArrayList<>();
-
+        if(path == null || path.equals("/")){
+            agregarPedido(req, resp);
+        }
+    }
+    
+    public void agregarPedido(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
         int clienteId = Integer.parseInt(req.getParameter("clienteId"));
-        String fecha = req.getParameter("fecha");
+        Date fecha = Date.valueOf(req.getParameter("fecha"));
+        Time hora = Time.valueOf(req.getParameter("hora") + ":00");
         double total = Double.parseDouble(req.getParameter("total"));
         int direccionId = Integer.parseInt(req.getParameter("direccionId"));
         
-        pedido.add(Integer.toString(clienteId));
-        pedido.add(fecha);
-        pedido.add(Double.toString(total));
-        pedido.add(Integer.toString(direccionId));
+        ps.agregarPedido(new Pedido(clienteId, fecha, hora, total, direccionId));
         
-        req.setAttribute("pedido", pedido);
-        req.setAttribute("mensaje", "¡¡Pedido agregado con exito :D!!");
-        getServletContext().getRequestDispatcher("pedidos/formulario-pedidos/formulario-pedidos.jsp").forward(req, resp);
+        resp.sendRedirect(req.getContextPath() + "/index.jsp");
     }
 }

@@ -1,6 +1,7 @@
 package org.ianalfaro.webapp.service;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import java.util.List;
 import org.kevingutierrez.webapp.model.Factura;
 import org.pablocastillo.webapp.util.JpaUtil;
@@ -19,8 +20,21 @@ public class FacturaService implements IFacturaService{
     }
 
     @Override
-    public void agregarFactura() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void agregarFactura(Factura factura) {
+        EntityTransaction transaction = em.getTransaction();
+        
+        try{
+            transaction.begin();
+            em.persist(factura);
+            transaction.commit();
+        }catch(Exception e){
+            if(transaction.isActive()){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        }
+        
+        em.persist(factura);
     }
 
     @Override
