@@ -33,7 +33,11 @@
                         <a class="nav-link active" href="productos-femeninos.jsp">Productos Femeninos</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a class="nav-link" href="#">Formulario Productos Femeninos</a>
+=======
+                        <a class="nav-link" href="formulario-femeninos/agregar-femeninos.jsp">Formulario Productos Femeninos</a>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../femenino-servlet">Listar Productos Femeninos</a>

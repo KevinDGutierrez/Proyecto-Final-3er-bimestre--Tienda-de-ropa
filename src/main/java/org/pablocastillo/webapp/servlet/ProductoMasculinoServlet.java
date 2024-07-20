@@ -29,6 +29,34 @@ public class ProductoMasculinoServlet extends HttpServlet {
         req.getRequestDispatcher("productos-masculinos/listar-masculinos/listar-masculinos.jsp").forward(req, resp);
     }
 
+<<<<<<< HEAD
     
     
+=======
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String path = req.getPathInfo();
+        
+        if(path == null || path.equals("/")){
+            agregarProductoMasculino(req, resp);
+        }else{
+            resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
+        }
+    }
+    
+    public void agregarProductoMasculino(HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
+        String nombre = req.getParameter("nombreProducto");
+        Double precio = Double.parseDouble(req.getParameter("precioCompra"));
+        String descripcion = req.getParameter("descripcionProducto");
+        int cantidad = Integer.parseInt(req.getParameter("cantidadStock"));
+        Double precioVU = Double.parseDouble(req.getParameter("precioVentaUnitario"));
+        int distribuidor = Integer.parseInt(req.getParameter("distribuidorId"));
+        int categoriaProducto = Integer.parseInt(req.getParameter("categoriaproductoId"));
+        
+        ps.agregarProductoMasculino(new ProductoMasculinos(nombre, precio, descripcion, cantidad, precioVU, distribuidor, categoriaProducto));
+        
+        //resp.sendRedirect("/SGBDProductosIN5CM/index.jsp");
+        resp.sendRedirect(req.getContextPath() +  "/");
+    }
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 }

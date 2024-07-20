@@ -7,6 +7,11 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+<<<<<<< HEAD
+=======
+import java.sql.Date;
+import java.sql.Time;
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 import java.util.ArrayList;
 import java.util.List;
 import org.ianalfaro.webapp.service.FacturaService;
@@ -34,6 +39,7 @@ public class FacturaServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
+<<<<<<< HEAD
         resp.setContentType("text/html");
         
         ArrayList<String> factura = new ArrayList<>();
@@ -55,5 +61,26 @@ public class FacturaServlet extends HttpServlet{
         req.setAttribute("factura", factura);
         req.setAttribute("mensaje", "¡¡Factura agregada con exito :D!!");
         getServletContext().getRequestDispatcher("facturas/formulario-facturas/formulario-facturas.jsp").forward(req, resp);
+=======
+        String path = req.getPathInfo();
+        
+        if(path == null || path.equals("/")){
+            agregarFactura(req, resp);
+        }
+    }
+    
+    public void agregarFactura(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+        Date fecha = Date.valueOf(req.getParameter("fecha"));
+        Time hora = Time.valueOf(req.getParameter("hora") + ":00");
+        int clienteId = Integer.parseInt(req.getParameter("clienteId"));
+        int productoFemeninoId = Integer.parseInt(req.getParameter("productoFemeninoId"));
+        int productoMasculinoId = Integer.parseInt(req.getParameter("productoMasculinoId"));
+        double total = Double.parseDouble(req.getParameter("total"));
+        
+        ps.agregarFactura(new Factura(fecha, hora, clienteId, total, productoFemeninoId, productoMasculinoId));
+        
+        resp.sendRedirect(req.getContextPath() + "/index.jsp");
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     }
 }

@@ -33,7 +33,11 @@
                         <a class="nav-link active" href="direccion.jsp">Direcciones</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a class="nav-link" href="#">Formulario Direcciones</a>
+=======
+                        <a class="nav-link" href="formulario-Direcciones/formulario-Direcciones.jsp">Formulario Direcciones</a>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../direccion-servlet">Listar Direcciones</a>

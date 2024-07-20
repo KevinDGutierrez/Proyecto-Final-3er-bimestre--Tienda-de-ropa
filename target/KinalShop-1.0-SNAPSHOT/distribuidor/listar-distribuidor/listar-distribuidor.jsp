@@ -36,10 +36,17 @@
                     <a class="nav-link" aria-current="page" href="distribuidor/distribuidor.jsp">Distribuidores</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                     <a class="nav-link" href="#">Formulario Distribuidores</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="distribuidor-servlet">Lista Distribuidores</a>
+=======
+                    <a class="nav-link" href="distribuidor/formulario-distribuidor/formulario-distribuidor.jsp">Formulario Distribuidores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./distribuidor-servlet">Lista Distribuidores</a>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>

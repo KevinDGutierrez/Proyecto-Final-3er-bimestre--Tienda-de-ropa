@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\kevin\OneDrive\Documentos\NetBeansProjects\Proyecto-Final-3er-bimestre--Tienda-de-ropa-master\src\main\java\org\alejandrocuxun\webapp\model\ProductoMasculino.java
 C:\Users\kevin\OneDrive\Documentos\NetBeansProjects\Proyecto-Final-3er-bimestre--Tienda-de-ropa-master\src\main\java\org\pablocastillo\webapp\service\DistribuidorService.java
 C:\Users\kevin\OneDrive\Documentos\NetBeansProjects\Proyecto-Final-3er-bimestre--Tienda-de-ropa-master\src\main\java\org\ianalfaro\webapp\service\CiudadService.java
@@ -44,3 +45,58 @@ C:\Users\kevin\OneDrive\Documentos\NetBeansProjects\Proyecto-Final-3er-bimestre-
 C:\Users\kevin\OneDrive\Documentos\NetBeansProjects\Proyecto-Final-3er-bimestre--Tienda-de-ropa-master\src\main\java\org\ianalfaro\webapp\servlet\CiudadServlet.java
 C:\Users\kevin\OneDrive\Documentos\NetBeansProjects\Proyecto-Final-3er-bimestre--Tienda-de-ropa-master\src\main\java\org\ianalfaro\webapp\service\ICiudadService.java
 C:\Users\kevin\OneDrive\Documentos\NetBeansProjects\Proyecto-Final-3er-bimestre--Tienda-de-ropa-master\src\main\java\org\kevingutierrez\webapp\model\NivelDeAcceso.java
+=======
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\IDistribuidorService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\ClienteService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\IClienteService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\IDireccionService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\model\DetalleFactura.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\kevingutierrez\webapp\model\Ciudad.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\ICategoriaProductoService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\servlet\ProductoFemeninoServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\alejandrocuxun\webapp\model\Direcciones.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\PedidoService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\model\DetallePedido.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\DetallePedidoService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\kevingutierrez\webapp\model\Promocion.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\servlet\ClienteServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\IProductoFemeninoService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\servlet\DistribuidorServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\kevingutierrez\webapp\model\Pedido.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\servlet\PedidoServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\servlet\CiudadServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\servlet\CategoriaProductoServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\kevingutierrez\webapp\model\Usuario.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\IPromocionService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\util\JpaUtil.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\servlet\DetallePedidoServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\IDetallePedidoService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\CategoriaProductoService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\FacturaService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\servlet\DetalleFacturaServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\IPedidoService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\ProductoFemeninoService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\kevingutierrez\webapp\model\Direccion.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\servlet\DireccionServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\DetalleFacturaService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\Main.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\kevingutierrez\webapp\model\NivelDeAcceso.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\DireccionService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\IProductoMasculinoService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\PromocionService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\CiudadService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\servlet\PromocionServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\alejandrocuxun\webapp\model\Clientes.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\alejandrocuxun\webapp\model\ProductoMasculinos.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\kevingutierrez\webapp\model\Factura.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\ProductoMasculinoService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\ICiudadService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\servlet\FacturaServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\alejandrocuxun\webapp\model\Distribuidores.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\IDetalleFacturaService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\alejandrocuxun\webapp\model\CategoriaProductos.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\alejandrocuxun\webapp\model\ProductoFemeninos.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\servlet\ProductoMasculinoServlet.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\ianalfaro\webapp\service\IFacturaService.java
+C:\Users\alfar\Repositorios IN5CM\prueba\src\main\java\org\pablocastillo\webapp\service\DistribuidorService.java
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260

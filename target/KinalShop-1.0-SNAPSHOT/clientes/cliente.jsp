@@ -33,7 +33,11 @@
                         <a class="nav-link active" href="cliente.jsp">Clientes</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a class="nav-link" href="#">Formulario Clientes</a>
+=======
+                        <a class="nav-link" href="formulario-clientes/formulario-clientes.jsp">Formulario Clientes</a>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="../cliente-servlet">Listar Clientes</a>

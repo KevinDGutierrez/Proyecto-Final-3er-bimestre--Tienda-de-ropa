@@ -6,7 +6,11 @@ import org.kevingutierrez.webapp.model.Pedido;
 public interface IPedidoService {
     public List<Pedido> listarPedido();
     
+<<<<<<< HEAD
     public void agregarPedido();
+=======
+    public void agregarPedido(Pedido pedido);
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     
     public void eliminarPedido(int pedidoId);
     

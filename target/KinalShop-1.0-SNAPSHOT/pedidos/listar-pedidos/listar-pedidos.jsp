@@ -78,6 +78,10 @@
                         <th class="text-center text-bg-dark text-danger" scope="col">#</th>
                         <th class="text-center text-bg-dark text-danger" scope="col">Cliente</th>
                         <th class="text-center text-bg-dark text-danger" scope="col">Fecha</th>
+<<<<<<< HEAD
+=======
+                        <th class="text-center text-bg-dark text-danger" scope="col">Hora</th>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                         <th class="text-center text-bg-dark text-danger" scope="col">Total</th>
                         <th class="text-center text-bg-dark text-danger" scope="col">Direccion</th>
                     </tr>
@@ -90,6 +94,10 @@
                             <th class="text-center text-bg-dark text-danger" scope="row"><%=pedido.getPedidoId()%></th>
                             <th class="text-center text-bg-secondary text-light" scope="row"><%=pedido.getClienteId()%></th>
                             <th class="text-center text-bg-secondary text-light" scope="row"><%=pedido.getFecha()%></th>
+<<<<<<< HEAD
+=======
+                            <th class="text-center text-bg-secondary text-light" scope="row"><%=pedido.getHora()%></th>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                             <th class="text-center text-bg-secondary text-light" scope="row"><%=pedido.getTotal()%></th>
                             <th class="text-center text-bg-secondary text-light" scope="row"><%=pedido.getDireccionId()%></th>
                         </tr>

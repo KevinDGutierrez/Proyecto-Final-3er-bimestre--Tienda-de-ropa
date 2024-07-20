@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+=======
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 package org.alejandrocuxun.webapp.model;
 
 import jakarta.persistence.Entity;
@@ -11,6 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.sql.Blob;
 
+<<<<<<< HEAD
 /**
  *
  * @author aleja
@@ -22,6 +26,14 @@ public class ProductoFemeninos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
      private int productoFemeninoId;
+=======
+@Table(name = "ProductosFemeninos")
+@Entity
+public class ProductoFemeninos {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int productoFemeninoId;
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     private String nombreProducto;
     private double precioCompra;
     private String descripcionProducto;
@@ -29,12 +41,31 @@ public class ProductoFemeninos {
     private double precioVentaUnitario;
     private Blob imagenProducto;
     private int distribuidorId;
+<<<<<<< HEAD
     private int categoriaproductoId;
+=======
+    private int categoriaProductoId;
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 
     public ProductoFemeninos() {
     }
 
+<<<<<<< HEAD
     public ProductoFemeninos(int productoFemeninoId, String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, Blob imagenProducto, int distribuidorId, int categoriaproductoId) {
+=======
+    public ProductoFemeninos(String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, Blob imagenProducto, int distribuidorId, int categoriaProductoId) {
+        this.nombreProducto = nombreProducto;
+        this.precioCompra = precioCompra;
+        this.descripcionProducto = descripcionProducto;
+        this.cantidadStock = cantidadStock;
+        this.precioVentaUnitario = precioVentaUnitario;
+        this.imagenProducto = imagenProducto;
+        this.distribuidorId = distribuidorId;
+        this.categoriaProductoId = categoriaProductoId;
+    }
+
+    public ProductoFemeninos(int productoFemeninoId, String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, Blob imagenProducto, int distribuidorId, int categoriaProductoId) {
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
         this.productoFemeninoId = productoFemeninoId;
         this.nombreProducto = nombreProducto;
         this.precioCompra = precioCompra;
@@ -43,25 +74,41 @@ public class ProductoFemeninos {
         this.precioVentaUnitario = precioVentaUnitario;
         this.imagenProducto = imagenProducto;
         this.distribuidorId = distribuidorId;
+<<<<<<< HEAD
         this.categoriaproductoId = categoriaproductoId;
     }
 
     public ProductoFemeninos(String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, Blob imagenProducto, int distribuidorId, int categoriaproductoId) {
+=======
+        this.categoriaProductoId = categoriaProductoId;
+    }
+
+    public ProductoFemeninos(String nombreProducto, double precioCompra, String descripcionProducto, int cantidadStock, double precioVentaUnitario, int distribuidorId, int categoriaProductoId) {
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
         this.nombreProducto = nombreProducto;
         this.precioCompra = precioCompra;
         this.descripcionProducto = descripcionProducto;
         this.cantidadStock = cantidadStock;
         this.precioVentaUnitario = precioVentaUnitario;
+<<<<<<< HEAD
         this.imagenProducto = imagenProducto;
         this.distribuidorId = distribuidorId;
         this.categoriaproductoId = categoriaproductoId;
+=======
+        this.distribuidorId = distribuidorId;
+        this.categoriaProductoId = categoriaProductoId;
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     }
 
     public int getProductoFemeninoId() {
         return productoFemeninoId;
     }
 
+<<<<<<< HEAD
     public void setpProductoFemeninoId(int productoFemeninoId) {
+=======
+    public void setProductoFemeninoId(int productoFemeninoId) {
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
         this.productoFemeninoId = productoFemeninoId;
     }
 
@@ -121,16 +168,29 @@ public class ProductoFemeninos {
         this.distribuidorId = distribuidorId;
     }
 
+<<<<<<< HEAD
     public int getCategoriaproductoId() {
         return categoriaproductoId;
     }
 
     public void setCategoriaproductoId(int categoriaproductoId) {
         this.categoriaproductoId = categoriaproductoId;
+=======
+    public int getCategoriaProductoId() {
+        return categoriaProductoId;
+    }
+
+    public void setCategoriaProductoId(int categoriaProductoId) {
+        this.categoriaProductoId = categoriaProductoId;
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     }
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "ProductosFemeninos{" + "productoFemeninoId=" + productoFemeninoId + ", nombreProducto=" + nombreProducto + ", precioCompra=" + precioCompra + ", descripcionProducto=" + descripcionProducto + ", cantidadStock=" + cantidadStock + ", precioVentaUnitario=" + precioVentaUnitario + ", imagenProducto=" + imagenProducto + ", distribuidorId=" + distribuidorId + ", categoriaproductoId=" + categoriaproductoId + '}';
+=======
+        return "ProductoFemeninos{" + "productoFemeninoId=" + productoFemeninoId + ", nombreProducto=" + nombreProducto + ", precioCompra=" + precioCompra + ", descripcionProducto=" + descripcionProducto + ", cantidadStock=" + cantidadStock + ", precioVentaUnitario=" + precioVentaUnitario + ", imagenProducto=" + imagenProducto + ", distribuidorId=" + distribuidorId + ", categoriaproductoId=" + categoriaProductoId + '}';
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     }
 }

@@ -4,13 +4,19 @@
  */
 package org.kevingutierrez.webapp.model;
 
+<<<<<<< HEAD
 import jakarta.persistence.Column;
+=======
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+<<<<<<< HEAD
 import java.sql.Date;
+=======
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 
 @Table(name = "Ciudades")
 @Entity
@@ -36,6 +42,13 @@ public class Ciudad {
         this.nombreCiudad = nombreCiudad;
     }
 
+<<<<<<< HEAD
+=======
+    public Ciudad(String ciudadId, String nombreCiudad) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     public int getCiudadId() {
         return ciudadId;
     }

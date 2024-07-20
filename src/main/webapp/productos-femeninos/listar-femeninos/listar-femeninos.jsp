@@ -36,7 +36,11 @@
                     <a class="nav-link" aria-current="page" href="productos-femeninos/productos-femeninos.jsp">Producto Femeninos</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                     <a class="nav-link" href="#">Formulario Femeninos</a>
+=======
+                    <a class="nav-link" href="productos-femeninos/formulario-femeninos/agregar-femeninos.jsp">Formulario Femeninos</a>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="femenino-servlet">Lista Femeninos</a>
@@ -75,7 +79,10 @@
                         <th class="text-center text-bg-dark text-danger" scope="col">Precio</th>
                         <th class="text-center text-bg-dark text-danger" scope="col">Id Distribuidor</th>
                         <th class="text-center text-bg-dark text-danger" scope="col">Id Categoria</th>
+<<<<<<< HEAD
                         <th class="text-center text-bg-dark text-danger" scope="col">Imagen</th>
+=======
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                     </tr>
                 </thead>
                 <tbody>
@@ -90,8 +97,12 @@
                                 <td class="text-center text-bg-secondary text-light" scope="row"><%=productoFemenino.getCantidadStock()%></td>
                                 <td class="text-center text-bg-secondary text-light" scope="row"><%=productoFemenino.getPrecioVentaUnitario()%></td>
                                 <td class="text-center text-bg-secondary text-light" scope="row"><%=productoFemenino.getDistribuidorId()%></td>
+<<<<<<< HEAD
                                 <td class="text-center text-bg-secondary text-light" scope="row"><%=productoFemenino.getCategoriaproductoId()%></td>
                                 <td class="text-center text-bg-secondary text-light" scope="row"><%=productoFemenino.getImagenProducto()%></td>
+=======
+                                <td class="text-center text-bg-secondary text-light" scope="row"><%=productoFemenino.getCategoriaProductoId()%></td>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                             </tr>
                         <% }
                     %>

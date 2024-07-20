@@ -36,10 +36,17 @@
                     <a class="nav-link" aria-current="page" href="direccion/direccion.jsp">Direccion</a>
                 </li>
                 <li class="nav-item">
+<<<<<<< HEAD
                     <a class="nav-link" href="#">Formulario Direccion</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../../direccion-servlet">Lista Direccion</a>
+=======
+                    <a class="nav-link" href="direccion/formulario-Direcciones/formulario-Direcciones.jsp">Formulario Direccion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="direccion-servlet">Lista Direccion</a>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>

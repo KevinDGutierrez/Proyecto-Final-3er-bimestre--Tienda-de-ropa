@@ -3,7 +3,11 @@
     Created on : 16/07/2024, 17:49:21
     Author     : kevin
 --%>
+<<<<<<< HEAD
 
+=======
+<%@page import="java.util.ArrayList"%>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,7 +19,11 @@
     </head>
     
     <body>
+<<<<<<< HEAD
         <nav class="navbar navbar-dark bg-danger fixed-top">
+=======
+        <nav class="navbar navbar-dark bg-danger fixed-top position-relative">
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
             <div class="container-fluid">
               <a class="navbar-brand" href="../../index.jsp">
                 <img src="../../assets/image/KinalShopLogoClaro.png" alt="KinalShop Logo" class="img-fluid" style="height: 60px;">
@@ -70,6 +78,77 @@
               </div>
             </div>
         </nav>
+<<<<<<< HEAD
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+=======
+        <div>
+            <% ArrayList<String> pedido = (ArrayList)request.getAttribute("pedido"); %>
+            
+            <%  if(request.getAttribute("mensaje") != null){%>
+                <h3 class="text-center mt-5 mb-5"><%= request.getAttribute("mensaje")%></h3>
+                <%}
+            %>
+            
+            <%  if(pedido != null){
+                    for(String ped:pedido){%>
+                        <ul class="list-group container mb-3 w-50">
+                            <li class="list-group-item list-group-item-warning text-center"><%=ped%></li>
+                        </ul>
+                    <%}
+                }
+            %>
+        </div>
+        <div class="container mt-5 w-75">
+            <form action="/KinalShop/pedido-servlet" method="post" enctype="multipart/form-data" onsubmit="return validarFormulario()">
+                <div class="form-floating mb-4">
+                    <input type="number" class="form-control" id="clienteId" name="clienteId" placeholder="">
+                    <label for="clienteId">Ingresar el Id del Cliente</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input class="form-control" id="fecha" name="fecha" type="date" placeholder="">
+                    <label for="fecha">Fecha del Pedido</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input class="form-control" id="hora" name="hora" type="time" placeholder="">
+                    <label for="hora">Hora del Pedido</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="number" class="form-control" id="direccionId" name="direccionId" placeholder="">
+                    <label for="direccionId">Ingresar el Id de la Direccion</label>
+                </div>
+                <div class="input-group mb-4">
+                    <span class="input-group-text">Q</span>
+                    <input type="text" class="form-control" id="total" name="total">
+                    <span class="input-group-text">.00</span>
+                </div>
+                <div>
+                    <input class="btn btn-success position-relative" type="submit" value="Agregar">
+                </div>
+                <a href="../../detalles-pedidos/formulario-detalles-pedidos/formulario-detalles-pedidos.jsp"><button class="btn btn-danger" type="button">Agregar DetallePedido</button></a>
+            </form>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        function validarFormulario() {
+            const clienteId = document.getElementById('clienteId').value.trim();
+            const fecha = document.getElementById('fecha').value;
+            const hora = document.getElementById('hora').value;
+            const total = document.getElementById('total').value.trim();
+            const direccionId = document.getElementById('direccionId').value.trim();
+
+            if (!clienteId || !fecha || !hora || !total || !direccionId) {
+                alert('Algunos campos aún no están llenos, favor de verificar.');
+                return false;
+            }
+
+            if (isNaN(clienteId) || isNaN(total) || isNaN(direccionId)) {
+                alert('Por favor ingrese valores numéricos válidos en los campos correspondientes.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     </body>
 </html>

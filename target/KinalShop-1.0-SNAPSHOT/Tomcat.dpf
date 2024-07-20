@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/KinalShop">
+<<<<<<< HEAD
   <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" name="jdbc/TiendaDeRopa" password="MRe7bSA9" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/TiendaDeRopa?serverTimezone=GMT-6" username="ianAlfaro"/>
+=======
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" name="jdbc/TiendaDeRopa" password="admin" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/TiendaDeRopa?serverTimezone=GMT-6" username="root"/>
+>>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 </Context>
