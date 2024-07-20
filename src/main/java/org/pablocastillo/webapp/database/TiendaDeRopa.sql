@@ -30,11 +30,11 @@ CREATE TABLE Clientes(
         REFERENCES Direcciones (direccionId)
 );
 
-CREATE TABLE CategoriaProductos (
-    categoriaProductosId INT NOT NULL AUTO_INCREMENT,
-    nombreCategoria VARCHAR(30),
-    descripcionCategoria VARCHAR(100),
-    PRIMARY KEY (categoriaProductosId)
+CREATE TABLE CategoriaProductos(
+    categoriaProductoId INT NOT NULL AUTO_INCREMENT,
+    nombreCategoria VARCHAR(30) NOT NULL,
+    descripcionCategoria VARCHAR(100) NOT NULL,
+    PRIMARY KEY PK_categoriaProductoId (categoriaProductoId)
 );
 
 CREATE TABLE Distribuidores(
@@ -56,12 +56,12 @@ CREATE TABLE ProductosMasculinos(
     precioVentaUnitario DECIMAL(10,2),
     imagenProducto LONGBLOB,
     distribuidorId INT NOT NULL,
-    categoriaproductosId INT NOT NULL,
+    categoriaproductoId INT NOT NULL,
     PRIMARY KEY PK_productoMasculinoId (productoMasculinoId),
     CONSTRAINT FK_ProductosMasculinos_Distribuidores FOREIGN KEY (distribuidorId)
         REFERENCES Distribuidores(distribuidorId),
-    CONSTRAINT FK_ProductosMasculinos_Categoriaproductos FOREIGN KEY (categoriaproductosId)
-        REFERENCES CategoriaProductos(categoriaproductosId)
+    CONSTRAINT FK_ProductosMasculinos_Categoriaproductos FOREIGN KEY (categoriaproductoId)
+        REFERENCES CategoriaProductos(categoriaproductoId)
 );
 
 
@@ -74,12 +74,12 @@ CREATE TABLE ProductosFemeninos(
     precioVentaUnitario DECIMAL(10,2),
     imagenProducto LONGBLOB,
     distribuidorId INT NOT NULL,
-    categoriaproductosId INT NOT NULL,
+    categoriaproductoId INT NOT NULL,
     PRIMARY KEY PK_productoFemeninoId (productoFemeninoId),
     CONSTRAINT FK_ProductosFemeninos_Distribuidores FOREIGN KEY (distribuidorId)
         REFERENCES Distribuidores(distribuidorId),
-    CONSTRAINT FK_ProductosFemeninos_Categoriaproductos FOREIGN KEY (categoriaproductosId)
-        REFERENCES CategoriaProductos(categoriaproductosId)
+    CONSTRAINT FK_ProductosFemeninos_Categoriaproductos FOREIGN KEY (categoriaproductoId)
+        REFERENCES CategoriaProductos(categoriaproductoId)
 );
 
 
@@ -205,11 +205,11 @@ INSERT INTO Clientes (nombre, apellido, direccionId) VALUES
 -- CATEGORIA PRODUCTOS --
 
 INSERT INTO CategoriaProductos (nombreCategoria, descripcionCategoria) VALUES 
-    ('Camisas', 'Camisas de diferentes estilos y colores'),
-    ('Pantalones', 'Pantalones de vestir, casuales y jeans'),
-    ('Vestidos', 'Vestidos formales e informales para toda ocasión'),
-    ('Chaquetas', 'Chaquetas y abrigos para todas las estaciones'),
-    ('Accesorios', 'Accesorios de moda como cinturones, sombreros y bufandas');
+	('Camisas', 'Camisas de diferentes estilos y colores'),
+	('Pantalones', 'Pantalones de vestir, casuales y jeans'),
+	('Vestidos', 'Vestidos formales e informales para toda ocasión'),
+	('Chaquetas', 'Chaquetas y abrigos para todas las estaciones'),
+	('Accesorios', 'Accesorios de moda como cinturones, sombreros y bufandas');
 
 -- DISTRIBUIDORES --
 
@@ -223,7 +223,7 @@ INSERT INTO Distribuidores (nombreDistribuidor, direccionDistribuidor, nitDistri
 
 -- PRODUCTOS MASCULINOS --
 
-INSERT INTO ProductosMasculinos (nombreProducto, precioCompra, descripcionProducto, cantidadStock, precioVentaUnitario, distribuidorId, categoriaproductosId) VALUES
+INSERT INTO ProductosMasculinos (nombreProducto, precioCompra, descripcionProducto, cantidadStock, precioVentaUnitario, distribuidorId, categoriaproductoId) VALUES
 	('Camisa Casual', 15.50, 'Camisa de algodón para uso diario', 50, 25.00, 1, 1),
 	('Pantalón de Vestir', 20.00, 'Pantalón de vestir elegante', 30, 40.00, 2, 2),
 	('Chaqueta de Cuero', 50.00, 'Chaqueta de cuero genuino', 10, 100.00, 3, 4),
@@ -232,7 +232,7 @@ INSERT INTO ProductosMasculinos (nombreProducto, precioCompra, descripcionProduc
 
 -- PRODUCTOS FEMENINOS --
 
-INSERT INTO ProductosFemeninos (nombreProducto, precioCompra, descripcionProducto, cantidadStock, precioVentaUnitario, distribuidorId, categoriaproductosId) VALUES
+INSERT INTO ProductosFemeninos (nombreProducto, precioCompra, descripcionProducto, cantidadStock, precioVentaUnitario, distribuidorId, categoriaproductoId) VALUES
 	('Blusa Elegante', 12.00, 'Blusa de seda con encaje', 50, 25.00, 1, 1),
 	('Falda Casual', 8.00, 'Falda de mezclilla para uso diario', 60, 20.00, 2, 2),
 	('Vestido de Fiesta', 30.00, 'Vestido largo de gala', 20, 60.00, 3, 3),
@@ -293,10 +293,10 @@ INSERT INTO DetalleFacturas (facturaId, productoFemeninoId, productoMasculinoId)
 
 -- DETALLE PEDIDOS --
 INSERT INTO DetallePedidos (cantidadComprada, productoMasculinoId, productoFemeninoId, pedidoId) VALUES 
-    (10, 1, 2, 1),
-    (20, 2, 1, 2),
-    (15, 3, 3, 3),
-    (25, 4, 4, 4),
-    (30, 3, 5, 5);
-
-select * from CategoriaProductos;
+	(10, 1, 2, 1),
+	(20, 2, 1, 2),
+	(15, 3, 3, 3),
+	(25, 4, 4, 4),
+	(30, 3, 5, 5);
+    
+    

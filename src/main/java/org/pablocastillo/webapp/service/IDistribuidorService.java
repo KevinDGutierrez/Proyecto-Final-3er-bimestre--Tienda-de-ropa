@@ -6,7 +6,7 @@ import org.alejandrocuxun.webapp.model.Distribuidores;
 public interface IDistribuidorService {
     public List<Distribuidores> listarDistribuidor();
     
-    public void agregarDistribuidor();
+    public void agregarDistribuidor(Distribuidores distribuidores);
     
     public void eliminarDistribuidor(int distribuidorId);
     

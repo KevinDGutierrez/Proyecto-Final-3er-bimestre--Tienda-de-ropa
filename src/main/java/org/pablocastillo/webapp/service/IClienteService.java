@@ -6,7 +6,7 @@ import org.alejandrocuxun.webapp.model.Clientes;
 public interface IClienteService {
     public List<Clientes> listarCliente();
     
-    public void agregarCliente();
+    public void agregarCliente(Clientes clientes);
     
     public void eliminarCliente(int clienteId);
     

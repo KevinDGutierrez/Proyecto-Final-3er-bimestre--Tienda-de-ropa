@@ -11,6 +11,7 @@ public class JpaUtil {
         try{
             return Persistence.createEntityManagerFactory("KinalShop");
         }catch(Exception e){
+            e.printStackTrace();
             throw new ExceptionInInitializerError(e);
         }
     }

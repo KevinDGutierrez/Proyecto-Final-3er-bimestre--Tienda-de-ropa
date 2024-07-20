@@ -11,7 +11,7 @@
     <body>
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="index.jsp">
                 <img src="assets/image/KinalShopLogoClaro.png" alt="KinalShop Logo" class="img-fluid" style="height: 60px;">
                 KinalShop
               </a>
@@ -29,7 +29,7 @@
                       <a class="nav-link active" aria-current="page">Elija una opción</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="./index.jsp">Inicio</a>
+                      <a class="nav-link active" href="./index.jsp">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./ciudades/inicio-ciudades/inicio-ciudades.jsp">Ciudades</a>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                              <a href="productos-masculinos/producto-masculino.jsp">
+                              <a href="productos-masculino/producto-masculino.jsp">
                                 <img src="assets/image/OufitHombreInicio.png" class="d-block w-100" alt="Hombre">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>
@@ -167,5 +167,5 @@
         </div>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+    </body>
 </html>

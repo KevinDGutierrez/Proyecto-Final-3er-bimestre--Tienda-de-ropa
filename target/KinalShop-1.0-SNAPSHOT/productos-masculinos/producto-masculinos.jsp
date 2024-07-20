@@ -9,8 +9,9 @@
     <body>
         <nav class="navbar bg-body-tertiary fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="../index.jsp">
             <img src="../assets/image/Logo.png" alt="Kinal-Shop Logo" style="height: 40px; margin-right: 25px;">
+            KinalShop
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,16 +24,16 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Elija una opción</a>
+                      <p class="nav-link active" aria-current="page">Elija una opción</p>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="../index.jsp">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="producto-masculino.jsp">Productos Maculinos</a>
+                        <a class="nav-link active" href="producto-masculinos.jsp">Productos Maculinos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="formulario-masculino/formulario-masculino.jsp">Formulario Productos Masculinos</a>
+                        <a class="nav-link" href="#">Formulario Productos Masculinos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../masculino-servlet">Listar Productos Masculinos</a>
@@ -48,7 +49,7 @@
                         <li><a class="dropdown-item" href="../ciudades/inicio-ciudades/inicio-ciudades.jsp">Ciudades</a></li>
                         <li><a class="dropdown-item" href="../promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a></li>
                         <li><a class="dropdown-item" href="../distribuidor/distribuidor.jsp">Distribuidores</a></li>
-                        <li><a class="dropdown-item" href="../productos-femeninos/productos-femenino.jsp">Productos Femeninos</a></li>
+                        <li><a class="dropdown-item" href="../productos-femeninos/productos-femeninos.jsp">Productos Femeninos</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>

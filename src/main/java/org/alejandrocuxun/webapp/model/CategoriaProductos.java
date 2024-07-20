@@ -1,5 +1,6 @@
 package org.alejandrocuxun.webapp.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,6 +14,7 @@ public class CategoriaProductos {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "categoriaProductoId")
     private int categoriaProductosId;
     private String nombreCategoria;
     private String descripcionCategoria;

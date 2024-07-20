@@ -10,10 +10,11 @@
 
     </head>
     <body>
-        <nav class="navbar bg-body-tertiary fixed-top">
+        <nav class="navbar bg-body-tertiary fixed-top position-relative">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="../../assets/image/Logo.png" alt="Kinal-Shop Logo" style="height: 40px; margin-right: 25px;">
+          <a class="navbar-brand" href="index.jsp">
+            <img src="assets/image/Logo.png" alt="Kinal-Shop Logo" style="height: 40px; margin-right: 25px;">
+            KinalShop
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,32 +27,32 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Elija una opción</a>
+                    <p class="nav-link active" aria-current="page">Elija una opción</p>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.jsp">Inicio</a>
+                    <a class="nav-link" href="index.jsp">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="categoria-producto.jsp">Categorias Productos</a>
+                    <a class="nav-link" aria-current="page" href="categoria-productos/categoria-producto.jsp">Categorias Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="formulario-categorias/formulario-categorias.jsp">Formulario Categoria Productos</a>
+                    <a class="nav-link" href="categoria-productos/formulario-categorias/formulario-categorias.jsp">Formulario Categoria Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="../../categoria-servlet">Lista Categorias Productos</a>
+                    <a class="nav-link active" aria-current="page" href="./categoria-servlet">Lista Categorias Productos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Opciones</a>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="../direccion/direccion.jsp">Direcciones</a></li>
-                        <li><a class="dropdown-item" href="../clientes/cliente.jsp">Clientes</a></li>
-                        <li><a class="dropdown-item" href="../distribuidor/distribuidor.jsp">Distribuidores</a></li>
-                        <li><a class="dropdown-item" href="../facturas/inicio-factura/inicio-factura.jsp">Facturas</a></li>
-                        <li><a class="dropdown-item" href="../pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
-                        <li><a class="dropdown-item" href="../ciudades/inicio-ciudades/inicio-ciudades.jsp">Ciudades</a></li>
-                        <li><a class="dropdown-item" href="../promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a></li>
-                        <li><a class="dropdown-item" href="../productos-femeninos/productos-femenino.jsp">Productos Femeninos</a></li>
-                        <li><a class="dropdown-item" href="../productos-masculino/producto-masculino.jsp">Productos Masculinos</a></li>
+                        <li><a class="dropdown-item" href="direccion/direccion.jsp">Direcciones</a></li>
+                        <li><a class="dropdown-item" href="clientes/cliente.jsp">Clientes</a></li>
+                        <li><a class="dropdown-item" href="distribuidor/distribuidor.jsp">Distribuidores</a></li>
+                        <li><a class="dropdown-item" href="facturas/inicio-factura/inicio-factura.jsp">Facturas</a></li>
+                        <li><a class="dropdown-item" href="pedidos/inicio-pedidos/inicio-pedidos.jsp">Pedidos</a></li>
+                        <li><a class="dropdown-item" href="ciudades/inicio-ciudades/inicio-ciudades.jsp">Ciudades</a></li>
+                        <li><a class="dropdown-item" href="promociones/inicio-promociones/inicio-promociones.jsp">Promociones</a></li>
+                        <li><a class="dropdown-item" href="productos-femeninos/productos-femeninos.jsp">Productos Femeninos</a></li>
+                        <li><a class="dropdown-item" href="productos-masculinos/producto-masculinos.jsp">Productos Masculinos</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
