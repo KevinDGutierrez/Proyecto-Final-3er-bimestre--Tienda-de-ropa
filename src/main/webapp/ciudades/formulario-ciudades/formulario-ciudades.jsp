@@ -3,11 +3,7 @@
     Created on : 16/07/2024, 15:58:17
     Author     : kevin
 --%>
-<<<<<<< HEAD
-
-=======
 <%@page import = "java.util.ArrayList"%>
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,11 +14,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
     <body>
-<<<<<<< HEAD
-        <nav class="navbar navbar-dark bg-info fixed-top">
-=======
         <nav class="navbar navbar-dark bg-info fixed-top position-relative">
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
             <div class="container-fluid">
               <a class="navbar-brand" href="../../index.jsp">
                 <img src="../../assets/image/KinalShopLogo.png" alt="KinalShop Logo" class="img-fluid" style="height: 60px;">
@@ -75,9 +67,6 @@
               </div>
             </div>
         </nav>
-<<<<<<< HEAD
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-=======
         <div>
             <% ArrayList<String> ciudad = (ArrayList)request.getAttribute("ciudad"); %>
             
@@ -119,6 +108,5 @@
                 return true;
             }
         </script>
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     </body>
 </html>

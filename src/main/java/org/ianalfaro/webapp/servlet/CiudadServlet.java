@@ -7,10 +7,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-<<<<<<< HEAD
-import java.util.ArrayList;
-=======
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 import java.util.List;
 import org.ianalfaro.webapp.service.CiudadService;
 import org.kevingutierrez.webapp.model.Ciudad;
@@ -18,11 +14,7 @@ import org.kevingutierrez.webapp.model.Ciudad;
 @WebServlet("/ciudad-servlet")
 @MultipartConfig
 public class CiudadServlet extends HttpServlet{
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     private CiudadService ps;
     
     @Override
@@ -38,22 +30,6 @@ public class CiudadServlet extends HttpServlet{
         req.getRequestDispatcher("ciudades/listar-ciudades/listar-ciudades.jsp").forward(req, resp);
     }
     
-<<<<<<< HEAD
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
-        resp.setContentType("text/html");
-        
-        ArrayList<String> ciudad = new ArrayList<>();
-
-        String nombreCiudad = req.getParameter("nombreCiudad");
-        
-        ciudad.add(nombreCiudad);
-        
-        req.setAttribute("ciudad", ciudad);
-        req.setAttribute("mensaje", "¡¡Ciudad agregado con exito :D!!");
-        getServletContext().getRequestDispatcher("ciudades/formulario-ciudades/formulario-ciudades.jsp").forward(req, resp);
-=======
      
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -71,6 +47,5 @@ public class CiudadServlet extends HttpServlet{
         ps.agregarCiudad(new Ciudad(nombreCiudad));
         
         resp.sendRedirect(req.getContextPath() + "/index.jsp");
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     }
 }

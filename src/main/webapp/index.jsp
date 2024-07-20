@@ -104,11 +104,7 @@
                         </div>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-<<<<<<< HEAD
                               <a href="productos-masculinos/producto-masculinos.jsp">
-=======
-                              <a href="productos-masculino/producto-masculino.jsp">
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                                 <img src="assets/image/OufitHombreInicio.png" class="d-block w-100" alt="Hombre">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>
@@ -116,11 +112,7 @@
                             </a>
                           </div>
                           <div class="carousel-item">
-<<<<<<< HEAD
                             <a href="productos-femeninos/productos-femeninos.jsp">
-=======
-                            <a href="productos-femeninos/productos-femenino.jsp">
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                                 <img src="assets/image/OufitMujerInicio.jpg" class="d-block w-100 h-60" alt="Mujer">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>
@@ -145,11 +137,7 @@
                         </div>
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-<<<<<<< HEAD
-                              <a href="./promociones/inicio-promociones/inicio-promociones.jsp">
-=======
                               <a href="promociones/inicio-promociones/inicio-promociones.jsp">
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                                 <img src="assets/image/promocion1Inicio.png" class="d-block w-100" alt="Promocion1">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>
@@ -157,11 +145,7 @@
                             </a>
                           </div>
                           <div class="carousel-item">
-<<<<<<< HEAD
-                            <a href="./promociones/inicio-promociones/inicio-promociones.jsp">
-=======
                             <a href="promociones/inicio-promociones/inicio-promociones.jsp">
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                                 <img src="assets/image/Promocion2Inicio.png" class="d-block w-100 h-60" alt="Promocion2">
                                 <div class="carousel-caption d-none d-md-block">
                                     <p>Haz clic en la imagen para saber más</p>

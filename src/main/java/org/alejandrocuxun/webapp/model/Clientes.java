@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-=======
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 package org.alejandrocuxun.webapp.model;
 
 import jakarta.persistence.Entity;

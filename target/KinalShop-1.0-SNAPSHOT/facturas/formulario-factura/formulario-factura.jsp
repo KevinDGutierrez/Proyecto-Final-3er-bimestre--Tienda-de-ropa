@@ -3,11 +3,7 @@
     Created on : 16/07/2024, 16:49:55
     Author     : kevin
 --%>
-<<<<<<< HEAD
-
-=======
 <%@page import = "java.util.ArrayList"%>
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,11 +15,7 @@
     </head>
     
     <body>
-<<<<<<< HEAD
-        <nav class="navbar navbar-dark bg-info fixed-top">
-=======
         <nav class="navbar navbar-dark bg-info fixed-top position-relative">
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
             <div class="container-fluid">
               <a class="navbar-brand" href="../../index.jsp">
                 <img src="../../assets/image/KinalShopLogo.png" alt="KinalShop Logo" class="img-fluid" style="height: 60px;">
@@ -78,11 +70,6 @@
               </div>
             </div>
         </nav>
-<<<<<<< HEAD
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
-</html>
-=======
         <div>
             <% ArrayList<String> factura = (ArrayList)request.getAttribute("factura"); %>
             
@@ -158,4 +145,3 @@
     </script>
     </body>
 </html>
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260

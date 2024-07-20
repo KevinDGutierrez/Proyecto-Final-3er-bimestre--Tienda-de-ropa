@@ -29,10 +29,6 @@ public class ProductoMasculinoServlet extends HttpServlet {
         req.getRequestDispatcher("productos-masculinos/listar-masculinos/listar-masculinos.jsp").forward(req, resp);
     }
 
-<<<<<<< HEAD
-    
-    
-=======
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String path = req.getPathInfo();
@@ -58,5 +54,4 @@ public class ProductoMasculinoServlet extends HttpServlet {
         //resp.sendRedirect("/SGBDProductosIN5CM/index.jsp");
         resp.sendRedirect(req.getContextPath() +  "/");
     }
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 }

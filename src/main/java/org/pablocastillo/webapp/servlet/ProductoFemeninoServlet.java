@@ -7,10 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-<<<<<<< HEAD
-=======
 import java.sql.Blob;
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 import java.util.List;
 import org.alejandrocuxun.webapp.model.ProductoFemeninos;
 import org.pablocastillo.webapp.service.ProductoFemeninoService;
@@ -33,10 +30,6 @@ public class ProductoFemeninoServlet extends HttpServlet {
         req.getRequestDispatcher("productos-femeninos/listar-femeninos/listar-femeninos.jsp").forward(req, resp);
     }
 
-<<<<<<< HEAD
-    
-    
-=======
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String path = req.getPathInfo();
@@ -61,5 +54,4 @@ public class ProductoFemeninoServlet extends HttpServlet {
         
         resp.sendRedirect(req.getContextPath() +  "/");
     }
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 }

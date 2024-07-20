@@ -44,11 +44,7 @@
                         <a class="nav-link active" href="./formulario-promociones.jsp">Formulario Promociones</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
-                        <a class="nav-link" href="./promocion-servlet">Lista Promociones</a>
-=======
                         <a class="nav-link" href="../../promocion-servlet">Lista Promociones</a>
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                     </li>
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -33,11 +33,7 @@
                         <a class="nav-link active" href="distribuidor.jsp">Distribuidores</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
-                        <a class="nav-link" href="#">Formulario Distribuidores</a>
-=======
                         <a class="nav-link" href="formulario-distribuidor/formulario-distribuidor.jsp">Formulario Distribuidores</a>
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../distribuidor-servlet">Listar Distribuidores</a>
@@ -64,6 +60,31 @@
           </div>
         </div>
     </nav>
+    
+    <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../assets/image/InicioDistribuidores1.png" class="d-block w-100" alt="Ciudad1">
+                </div>
+            <div class="carousel-item">
+                <img src="../assets/image/InicioDistribuidores2.png" class="d-block w-100" alt="Ciudad2">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

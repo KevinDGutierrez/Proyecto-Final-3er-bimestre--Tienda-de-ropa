@@ -1,10 +1,7 @@
 package org.pablocastillo.webapp.service;
 
 import jakarta.persistence.EntityManager;
-<<<<<<< HEAD
-=======
 import jakarta.persistence.EntityTransaction;
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 import java.util.List;
 import org.alejandrocuxun.webapp.model.ProductoFemeninos;
 import org.pablocastillo.webapp.util.JpaUtil;
@@ -23,8 +20,6 @@ public class ProductoFemeninoService implements IProductoFemeninoService{
         return em.createQuery("SELECT pf FROM ProductoFemeninos pf", ProductoFemeninos.class).getResultList();
     }
 
-<<<<<<< HEAD
-=======
     public void agregarProductoFemenino(ProductoFemeninos productoFemeninos) {
         EntityTransaction transaction = em.getTransaction();
         
@@ -40,7 +35,6 @@ public class ProductoFemeninoService implements IProductoFemeninoService{
         }
     }
 
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
     @Override
     public void agregarProductoFemenino() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
@@ -60,9 +54,4 @@ public class ProductoFemeninoService implements IProductoFemeninoService{
     public void editarProductoFemenino(ProductoFemeninos productoFemenino) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> fa8c694f5cba1a78e84d3283884f292293ffb260
 }
